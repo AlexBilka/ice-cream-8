@@ -1,0 +1,26 @@
+.customer-reviews {
+    @include mobile-320 {
+        background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
+        width: 100%;
+        padding: 0px 94px;
+
+    }
+
+    .customer-reviews-banner {
+        @include mobile-320 {
+            margin-bottom: 80px;
+        }
+    }
+
+    .customer-reviews-feedback {
+        @include mobile-320 {
+            background: #84A178;
+            border-radius: 10px;
+        }
+    }
+
+    .customer-reviews-client {
+        width: auto;
+        height: auto;
+    }
+}
