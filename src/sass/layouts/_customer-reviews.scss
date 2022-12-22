@@ -1,8 +1,12 @@
 .customer-reviews {
     @include mobile-320 {
         background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
+        background-color: #84A178;
+        background-repeat: no-repeat;
+        background-position: top 32px center;
+
         width: 100%;
-        padding: 0px 94px;
+        padding: 0px 10px;
 
     }
 
@@ -16,11 +20,32 @@
         @include mobile-320 {
             background: #84A178;
             border-radius: 10px;
+            padding: 35px 39px;
+            text-align: center;
+            margin-bottom: 32px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 255%;
+            color: #FCFCFC;
         }
     }
 
     .customer-reviews-client {
-        width: auto;
-        height: auto;
+        @include mobile-320 {
+            margin: 0 auto 32px auto;
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+
+    .customer-reviews-clientname {
+        @include mobile-320 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 186%;
+            text-align: center;
+            color: #131313;
+        }
     }
 }
