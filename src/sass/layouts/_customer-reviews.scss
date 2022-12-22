@@ -1,23 +1,54 @@
 .customer-reviews {
-    @include mobile-320 {
+    @include mobile {
         background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
         background-color: #84A178;
         background-repeat: no-repeat;
         background-position: top 32px center;
-
+        border-radius: 0px;
         width: 100%;
         padding: 0px 10px;
+    }
+
+    @include tablet {
+        background-image: url(../images/customer-reviews/background-tablet1x.jpg);
+        background-color: #84A178;
+        background-repeat: no-repeat;
+        background-position: top 144px center;
+        border-radius: 0px;
+        width: 100%;
+        padding: 0px 32px;
+    }
+
+    @include desktop {
+        background-image: url(../images/customer-reviews/backgroud-desktop1x.jpg);
+        background-color: #84A178;
+        background-repeat: no-repeat;
+        background-position: top 98px center;
+        border-radius: 0px;
+        width: 100%;
+        padding: 0px 94px;
 
     }
 
     .customer-reviews-banner {
-        @include mobile-320 {
+        @include mobile {
             margin-bottom: 80px;
+            border-radius: 13px;
+        }
+
+        @include tablet {
+            margin-bottom: 100px;
+            border-radius: 18px;
+        }
+
+        @include desktop {
+            margin-bottom: 140px;
+            border-radius: 25px;
         }
     }
 
     .customer-reviews-feedback {
-        @include mobile-320 {
+        @include mobile {
             background: #84A178;
             border-radius: 10px;
             padding: 35px 39px;
@@ -28,10 +59,47 @@
             line-height: 255%;
             color: #FCFCFC;
         }
+
+        @include tablet {
+            background: #84A178;
+            border-radius: 10px;
+            padding: 28px 80px;
+            text-align: center;
+            margin-bottom: 32px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 255%;
+            color: #FCFCFC;
+        }
+
+        @include desktop {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 186%;
+            text-align: center;
+            padding: 43px 109px;
+            margin-bottom: 32px;
+            letter-spacing: 0.04em;
+            color: #FCFCFC;
+        }
     }
 
     .customer-reviews-client {
-        @include mobile-320 {
+        @include mobile {
+            margin: 0 auto 32px auto;
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        @include tablet {
+            margin: 0 auto 32px auto;
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        @include desktop {
             margin: 0 auto 32px auto;
             width: auto;
             height: auto;
@@ -40,12 +108,24 @@
     }
 
     .customer-reviews-clientname {
-        @include mobile-320 {
+        @include mobile {
             font-weight: 500;
             font-size: 20px;
             line-height: 186%;
             text-align: center;
             color: #131313;
+        }
+
+        @include tablet {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 186%;
+            text-align: center;
+            color: #131313;
+        }
+        @include desktop {
+            font-size: 16px;
+            text-align: center;
         }
     }
 }
