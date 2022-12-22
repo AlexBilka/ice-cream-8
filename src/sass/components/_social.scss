@@ -1,0 +1,44 @@
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  &__item {
+    width: 44px;
+    height: 44px;
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: $col-icon-bg-light;
+    transition: background-color $time-animation $function-cubic,
+      fill $time-animation $function-cubic;
+
+    &:hover,
+    &:focus {
+      fill: $col-icon-light;
+      background-color: $col-accent;
+    }
+  }
+
+  &__link--dark {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $col-bg-soc-icon-footer;
+    fill: $col-icon-light;
+    transition: background-color $time-animation $function-cubic;
+
+    &:hover,
+    &:focus {
+      background-color: $col-accent;
+    }
+  }
+}
