@@ -1,0 +1,33 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $col-text-primary;
+  
+}
+
+.section {
+  padding-bottom: 60px;
+  @include desktop {
+        padding-bottom: 94px;
+      }
+}
+
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  @include mobile {
+    max-width: 480px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}

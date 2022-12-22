@@ -1,0 +1,22 @@
+.btn {
+  border-style: none;
+  cursor: pointer;
+
+  border-radius: 4px;
+  font-family: inherit;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: $col-text-secondary;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: $col-accent;
+
+  transition: background-color $time-animation $function-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $col-btn-bg-secondary;
+  }
+}
+

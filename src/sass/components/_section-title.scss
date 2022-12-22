@@ -1,0 +1,12 @@
+.section-title {
+  margin-bottom: 30px;
+  text-align: center;
+
+  color: $col-title-primary;
+  font-size: 28px;
+  line-height: 1.16;
+  @include desktop {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
