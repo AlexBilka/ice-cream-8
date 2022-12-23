@@ -1,40 +1,43 @@
 :root {
+  --col-bg-light: #fcfcfc;
+  --col-bg-middle: #84a178;
+  --col-bg-dark: #84a178;
+
+  --col-bg-cream: #aec6a5;
+  --col-bg-cofee: #efd478;
+  --col-bg-milkshakes: #d6936d;
+
   --col-text-primary: #131313;
-  --col-text-secondary: #ffffff;
-  --col-title-primary: #212121;
+  --col-text-secondary: #fcfcfc;
 
-  --col-accent: #2196f3;
+  --col-title-primary: #131313;
+  --col-title-secondary: #fcfcfc;
 
-  --col-btn-primary: #ffffff;
-  --col-btn-bg-secondary: #188ce8;
-  --col-btn-bg-portfolio-secondary: #f5f4fa;
+  --col-default: #f8d24e;
+  --col-accent: #0a8817;
 
-  --col-bg-light: #ffffff;
-  --col-bg-dark: #2f303a;
+  --col-btn-default: #000000;
+  --col-btn-hover: #000000;
+  --col-btn-focus: #fcfcfc;
+  --col-btn-disabled: #000000;
 
-  --col-logo-ligh: #ffffff;
-  --col-logo-dark: #000000;
+  --col-menu-default: #f8d24e;
+  --col-menu-hover: #0a8817;
+  --col-menu-focus: #fcfcfc;
+  --col-menu-disabled: #ababab;
 
-  --col-bg-features-card: #f5f4fa;
-  --col-border-portfolio-card: #eeeeee;
-  --col-icon-light: #ffffff;
-  --col-icon-bg-light: #afb1b8;
-  --col-icon-bg-dark: #2f303a;
-  --col-bg-business-subtitle: rgba(47, 48, 58, 0.8);
-  --col-overlay-portfolio-card: rgba(33, 150, 243, 0.9);
+  --col-btn-bg-default: #f8d24e;
+  --col-btn-bg-hover: #0a8817;
+  --col-btn-bg-focus: #0a8817;
+  --col-btn-bg-disabled: #ababab;
 
-  --col-bg-soc-icon-footer: rgba(255, 255, 255, 0.1);
-  --col-address-footer-opacity: rgba(255, 255, 255, 0.3);
-
+  --col-icon-light: #fcfcfc;
+  --col-icon-dark: #84A178;
+  --col-icon-bg: #F8D24E;
+  --col-icon-bg-dark: #84A178;
+    
   --col-backdrop: rgba(0, 0, 0, 0.2);
-  --col-border-form: rgba(33, 33, 33, 0.3);
+  --col-border-form: #F8D24E;
 
-  --gra-hero: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-
-  --border-follow-input: 1px solid rgba(255, 255, 255, 0.3);
-  --border-follow-input-hover: 1px solid #ffffff;
-
-  --time-animation: 250ms;
-  --function-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --border-input: 1px solid #84A178;
 }
-
