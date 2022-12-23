@@ -1,0 +1,34 @@
+.hero {
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrap {
+    max-width: 360px;
+    margin: 0 auto;
+    @include desktop {
+      max-width: 696px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}
