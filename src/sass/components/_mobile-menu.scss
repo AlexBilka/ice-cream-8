@@ -14,11 +14,6 @@
   @include desktop {
     display: none;
   }
-
-  &:hover,
-  &:focus {
-    fill: $col-accent;
-  }
 }
 
 .menu-toggle-close {
@@ -29,11 +24,6 @@
   cursor: pointer;
   border: none;
   outline: none;
-
-  &:hover,
-  &:focus {
-    fill: $col-accent;
-  }
 }
 
 .menu-container {
@@ -43,8 +33,9 @@
   width: 100vw;
   height: 100vh;
   padding: 25px 45px;
-  background-color: $col-bg-light;
   z-index: 1;
+
+  background-color: var(--col-bg-light);
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -74,12 +65,7 @@
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: $col-title-primary;
 
-    &:hover,
-    &:focus {
-      color: $col-accent;
-    }
   }
 }
 
@@ -97,28 +83,15 @@
       font-size: 34px;
       line-height: 1.17;
       letter-spacing: 0.02em;
-      color: $col-accent;
 
-      &:hover,
-      &:focus {
-        color: $col-title-primary;
-      }
-      @include mobile-320 {
-        font-size: 26px;
-      }
-
+      
     }
     &--mail {
       font-weight: 500;
       font-size: 24px;
       line-height: 1.17;
       letter-spacing: 0.02em;
-      color: $col-title-primary;
 
-      &:hover,
-      &:focus {
-        color: $col-accent;
-      }
     }
   }
 }
@@ -127,10 +100,7 @@
   display: flex;
   gap: 20px;
 
-  @include mobile-320 {
-    flex-direction: column;
-  }
-
+  
   &__item {
     position: relative;
     display: flex;
@@ -142,12 +112,8 @@
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    color: $col-accent;
 
-    &:hover,
-    &:focus {
-      color: $col-title-primary;
-    }
+    
   }
 }
 
@@ -159,6 +125,5 @@
   height: 100%;
   content: "";
 
-  background-color: $col-icon-bg-light;
   border-radius: 2px;
 }
