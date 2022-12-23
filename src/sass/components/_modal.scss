@@ -3,9 +3,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: $col-backdrop;
-  transition: opacity $time-animation $function-cubic,
-    visibility $time-animation $function-cubic;
+  background-color: var(--col-backdrop);
 }
 .modal {
   width: calc(100% - 30px);
@@ -21,13 +19,12 @@
   @include desktop {
     max-width: 530px;
   }
-  background: $col-bg-light;
+  background: var(--col-bg-light);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform $time-animation $function-cubic;
 
   .backdrop.is-hidden {
     transform: translate(-50%, -50%) scale(0.5);
@@ -47,14 +44,7 @@
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: $col-bg-light;
   outline: transparent;
-  transition: fill $time-animation $function-cubic;
-
-  &:hover,
-  &:focus {
-    fill: $col-accent;
-  }
 }
 
 .is-hidden {
@@ -89,29 +79,17 @@
   font-size: 12px;
   letter-spacing: 0.01em;
 }
-.modal-icon,
-.modal-icon {
-  transition: fill $time-animation $function-cubic;
-}
+
 .modal-input {
   width: 100%;
   height: 40px;
   padding-left: 42px;
 
-  border: 1px solid $col-border-form;
+  border: 1px solid;
   border-radius: 4px;
   background-color: transparent;
   outline: transparent;
-  transition: border-color $time-animation $function-cubic;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $col-accent;
-  }
-  &:hover + .modal-icon,
-  &:focus + .modal-icon {
-    fill: $col-accent;
-  }
+  transition: border-color;
 }
 
 .modal-coment {
@@ -121,17 +99,11 @@
   padding-top: 12px;
   margin-bottom: 5px;
 
-  border: 1px solid $col-border-form;
+  border: 1px solid var(--col-backdrop);
   border-radius: 4px;
   background-color: transparent;
   outline: transparent;
   resize: none;
-  transition: border-color $time-animation $function-cubic;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $col-accent;
-  }
 }
 
 .check-text {
@@ -154,29 +126,22 @@
 .check-text span {
   width: 16px;
   height: 15px;
-  border: 1px solid $col-title-primary;
   border-radius: 2px;
   margin-right: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
-
-  transition: background-color $time-animation $function-cubic,
-    border-color $time-animation $function-cubic;
 }
 .modal-check {
   &:checked + .check-text span {
-    background-color: $col-accent;
     border: none;
-    fill: $col-icon-light;
   }
   &:hover + .check-text span {
-    border-color: $col-accent;
     cursor: pointer;
   }
   &:focus + .check-text span {
-    border-color: $col-accent;
+    border-color: var(--col-backdrop);
   }
 }
 
@@ -188,5 +153,4 @@
   padding-left: 0.5em;
   cursor: pointer;
   text-decoration: underline;
-  color: $col-accent;
 }

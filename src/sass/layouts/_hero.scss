@@ -9,26 +9,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: $gra-hero, url(../images/hero-bg-mob.jpg);
-  @include retina {
-    background-image: $gra-hero, url(../images/hero-bg-mob-2x.jpg);
-  }
-  background-color: $col-bg-dark;
-
-  @include tablet {
-    background-image: $gra-hero, url(../images/hero-bg-tab.jpg);
-    @include retina {
-      background-image: $gra-hero, url(../images/hero-bg-tab-2x.jpg);
-    }
-  }
-
-  @include desktop {
-    height: 600px;
-    background-image: $gra-hero, url(../images/hero-bg.jpg);
-    @include retina {
-      background-image: $gra-hero, url(../images/hero-bg-2x.jpg);
-    }
-  }
+  
   &__wrap {
     max-width: 360px;
     margin: 0 auto;
@@ -39,7 +20,6 @@
   &__title {
     margin-bottom: 30px;
 
-    color: $col-text-secondary;
     font-weight: 900;
     font-size: 22px;
     line-height: 1.6;
