@@ -1,12 +1,11 @@
 .section-title {
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: 32px;
 
-  color: $col-title-primary;
-  font-size: 28px;
-  line-height: 1.16;
-  @include desktop {
-    font-size: 36px;
-    margin-bottom: 50px;
-  }
+  color: var(--col-title-secondary);
+
+  font-family: 'Seymour One', sans-serif;
+  font-size: 30px;
+  line-height: 1.26;
+  letter-spacing: 0.04em;
 }
