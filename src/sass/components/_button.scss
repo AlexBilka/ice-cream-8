@@ -1,22 +1,25 @@
 .btn {
   border-style: none;
+  font-family: inherit;
+
+  padding: 12px 34px;
+  border-radius: 10px;
+
   cursor: pointer;
 
-  border-radius: 4px;
-  font-family: inherit;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: $col-text-secondary;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  background-color: $col-accent;
+  color: var(--col-btn-default);
+  background-color: var(--col-btn-bg-default);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
 
-  transition: background-color $time-animation $function-cubic;
+  &:hover {
+    color: var(--col-btn-hover);
+    background-color: var(--col-btn-bg-hover);
+  }
 
-  &:hover,
   &:focus {
-    background-color: $col-btn-bg-secondary;
+    color: var(--col-btn-focus);
+    background-color: var(--col-btn-bg-focus);
   }
 }
-
