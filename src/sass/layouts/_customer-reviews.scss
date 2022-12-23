@@ -1,40 +1,36 @@
 .customer-reviews {
-    @include mobile {
-        background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
-        background-color: #84A178;
-        background-repeat: no-repeat;
-        background-position: top 32px center;
-        border-radius: 0px;
-        width: 100%;
-        padding: 0px 10px;
-    }
+    background-color: #84A178;
+    background-repeat: repeat-x;
+    background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
+    background-position: top 32px center;
+    padding: 0px 10px 40px 10px;
+    width: 100%;
+
+
+    @include mobile-320 {}
+
+    @include mobile {}
 
     @include tablet {
         background-image: url(../images/customer-reviews/background-tablet1x.jpg);
-        background-color: #84A178;
-        background-repeat: no-repeat;
         background-position: top 144px center;
-        border-radius: 0px;
-        width: 100%;
-        padding: 0px 32px;
+        padding: 0px 32px 80px 32px;
     }
 
     @include desktop {
         background-image: url(../images/customer-reviews/backgroud-desktop1x.jpg);
-        background-color: #84A178;
-        background-repeat: no-repeat;
         background-position: top 98px center;
-        border-radius: 0px;
-        width: 100%;
-        padding: 0px 94px;
+        padding: 0px 94px 100px 94px;
 
     }
 
     .customer-reviews-banner {
-        @include mobile {
-            margin-bottom: 80px;
-            border-radius: 13px;
-        }
+        margin-bottom: 80px;
+        border-radius: 13px;
+
+        @include mobile-320 {}
+
+        @include mobile {}
 
         @include tablet {
             margin-bottom: 100px;
@@ -48,84 +44,105 @@
     }
 
     .customer-reviews-feedback {
-        @include mobile {
-            background: #84A178;
-            border-radius: 10px;
-            padding: 35px 39px;
-            text-align: center;
-            margin-bottom: 32px;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 255%;
-            color: #FCFCFC;
-        }
+        background: #84A178;
+        border-radius: 10px;
+        text-align: center;
+        color: #FCFCFC;
+        margin-bottom: 32px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 255%;
+        padding: 35px 39px;
+
+        @include mobile-320 {}
+
+        @include mobile {}
 
         @include tablet {
-            background: #84A178;
-            border-radius: 10px;
             padding: 28px 80px;
-            text-align: center;
-            margin-bottom: 32px;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 255%;
-            color: #FCFCFC;
+
         }
 
         @include desktop {
             font-weight: 500;
             font-size: 16px;
             line-height: 186%;
-            text-align: center;
             padding: 43px 109px;
             margin-bottom: 32px;
             letter-spacing: 0.04em;
-            color: #FCFCFC;
         }
     }
 
     .customer-reviews-client {
-        @include mobile {
-            margin: 0 auto 32px auto;
-            width: auto;
-            height: auto;
-            border-radius: 50%;
-        }
+        margin: 0 auto 32px auto;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
 
-        @include tablet {
-            margin: 0 auto 32px auto;
-            width: auto;
-            height: auto;
-            border-radius: 50%;
-        }
 
-        @include desktop {
-            margin: 0 auto 32px auto;
-            width: auto;
-            height: auto;
-            border-radius: 50%;
-        }
+        @include mobile-320 {}
+
+        @include mobile {}
+
+        @include tablet {}
+
+        @include desktop {}
     }
 
     .customer-reviews-clientname {
-        @include mobile {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 186%;
-            text-align: center;
-            color: #131313;
-        }
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 186%;
+        text-align: center;
+        color: #131313;
 
-        @include tablet {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 186%;
-            text-align: center;
-            color: #131313;
-        }
+        @include mobile-320 {}
+
+        @include mobile {}
+
+        @include tablet {}
+
         @include desktop {
             font-size: 16px;
-            text-align: center;
         }
+    }
+
+    // -------SWIPES----------------
+    .customer-reviews-swipes {
+        display: flex;
+        gap: 18px;
+        margin-top: 12px;
+        justify-content: center;
+
+        @include mobile-320 {}
+
+        @include mobile {}
+
+        @include tablet {
+            margin-top: 32px;
+        }
+
+        @include desktop {
+            margin-top: 32px;
+        }
+
+
+        .customer-reviews-swipepoint {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #D9D9D9;
+            cursor: pointer;
+
+
+            &.active,
+            &:hover,
+            &:focus {
+                background-color: #84A178;
+
+            }
+        }
+
+
     }
 }
