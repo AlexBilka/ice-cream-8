@@ -10,9 +10,7 @@ body {
 
 .section {
   padding-bottom: 60px;
-  @include desktop {
-    padding-bottom: 94px;
-  }
+  background-color: var(--col-bg-dark);
 }
 
 .container {

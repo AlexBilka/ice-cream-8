@@ -1,6 +1,7 @@
 :root {
+  --col-bg-primary: #ffffff;
   --col-bg-light: #fcfcfc;
-  --col-bg-middle: #84a178;
+  --col-bg-middle: #97af8d;
   --col-bg-dark: #84a178;
 
   --col-bg-cream: #aec6a5;
@@ -32,12 +33,12 @@
   --col-btn-bg-disabled: #ababab;
 
   --col-icon-light: #fcfcfc;
-  --col-icon-dark: #84A178;
-  --col-icon-bg: #F8D24E;
-  --col-icon-bg-dark: #84A178;
-    
-  --col-backdrop: rgba(0, 0, 0, 0.2);
-  --col-border-form: #F8D24E;
+  --col-icon-dark: #84a178;
+  --col-icon-bg: #f8d24e;
+  --col-icon-bg-dark: #84a178;
 
-  --border-input: 1px solid #84A178;
+  --col-backdrop: rgba(0, 0, 0, 0.2);
+  --col-border-form: #f8d24e;
+
+  --border-input: 1px solid #84a178;
 }
