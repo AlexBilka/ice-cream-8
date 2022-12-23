@@ -35,6 +35,8 @@
   padding: 25px 45px;
   z-index: 1;
 
+  background-color: var(--col-bg-light);
+
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 
