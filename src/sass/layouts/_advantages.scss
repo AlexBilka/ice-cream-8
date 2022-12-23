@@ -1,0 +1,90 @@
+.advantages {
+  background: #84a178;
+}
+
+.advantages__list {
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+.advantage__item {
+  display: inline-block;
+  width: 230px;
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    width: 135px;
+  }
+}
+
+.cow::before {
+  display: block;
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/advantages/cow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ice-cream::before {
+  display: block;
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/advantages/ice-crema.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weight::before {
+  display: block;
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/advantages/weight.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantages__number {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #fcfcfc;
+}
+
+.advantages__text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 170%;
+  color: #fcfcfc;
+}
