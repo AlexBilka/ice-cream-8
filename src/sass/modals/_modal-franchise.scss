@@ -6,10 +6,10 @@
     }
 
     .is-hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        }
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    }
 
     .franchise-modal {
     position: absolute;
@@ -18,9 +18,9 @@
     height: 674px;
     max-height: 90vh;
     overflow-y: scroll;
-    background-color: #FCFCFC;
+    background-color: var(--col-bg-light);
     border-radius: 10px;
-    border: 2px solid #F8D24E;
+    border: 2px solid var(--col-border-form);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -59,7 +59,7 @@
     font-size: 16px;
     line-height: calc(24 / 16);
     text-align: center;
-    color: #131313;
+    color: var(--col-text-primary);
     margin-bottom: 20px;
     @include tablet {
     font-size: 20px;
@@ -72,7 +72,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
-    color: #131313;
+    color: var(--col-text-primary);
     margin-bottom: 24px;
     @include tablet {
     font-size: 16px;
@@ -85,7 +85,7 @@
     width: 100%;
     height: 32px;
     border-radius: 10px;
-    border: 1px solid #84A178;
+    border: 1px solid var(--border-input);
     background: rgba(248, 210, 78, 0.1);
     padding: 8px 12px 7px 12px;
     cursor: pointer;
@@ -95,7 +95,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 1.4;
-    color: #131313;
+    color: var(--col-text-primary);
     }
     @include tablet {
         max-width: 368px;
@@ -116,9 +116,9 @@
     height: 64px;
     font-size: 12px;
     line-height: 1.4;
-    color: #131313;
+    color: var(--col-text-primary);
     background: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
+    border: 1px solid var(--border-input);
     border-radius: 10px;
     margin: 0 auto;
     margin-bottom: 24px;
@@ -130,7 +130,7 @@
     &::placeholder {
         font-size: 12px;
         line-height: 1.4;
-        color:#131313;
+        color: var(--col-text-primary);
         }
     }
     
@@ -141,13 +141,13 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #131313;
+    color: var(--col-text-primary);
     cursor: pointer;
     justify-content: center;
     max-width: 114px;
     width: 100%;
     height: 42px;
-    background: #F8D24E;
+    background: var(--col-btn-bg-defaul);
     border-radius: 10px;
     border: transparent;
     margin: 0 auto;
