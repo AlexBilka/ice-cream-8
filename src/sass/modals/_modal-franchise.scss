@@ -69,7 +69,8 @@
 
     .franchise-modal__close:hover,
     .franchise-modal__close:focus {
-    transition: box-shadow 250ms linear;
+    fill: #0A8817;
+    transition: color 250ms linear;
     }
       
     .franchise-modal__title {
