@@ -1,34 +1,83 @@
 .hero {
-  display: flex;
-  align-items: center;
-  max-width: 1600px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  
-  &__wrap {
-    max-width: 360px;
-    margin: 0 auto;
-    @include desktop {
-      max-width: 696px;
-    }
-  }
-  &__title {
-    margin-bottom: 30px;
+    background-color: var(--col-bg-dark);
+}
 
-    font-weight: 900;
-    font-size: 22px;
-    line-height: 1.6;
-    letter-spacing: 0.06em;
+.hero-tittle {
+    font-family: 'Seymour One', sherif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 96.5%;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
+    color: var(--col-bg-light);
+    padding-top: 50px;
+}
 
-    @include desktop {
-      font-size: 44px;
-      line-height: 1.36;
-    }
-  }
+.hero-tittle-span {
+    font-size: 34px;
+    line-height: 96.5%;
+}
+
+.hero-btn {
+    margin-top: 32px;
+}
+
+.first {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    padding: 11px 26px;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--col-default);
+    background-color: var(--col-bg-dark);
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.first a {
+    text-decoration: none;
+    color: var(--col-btn-default);
+}
+
+.second {
+    border: none;
+    background-color: var(--col-bg-dark);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.24;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    cursor: pointer;
+    ;
+}
+
+.second a {
+    color: var(--col-menu-default)
+}
+
+.wrap-hero-btn {
+    display: flex;
+}
+
+.hero-img-icecream {
+    position: relative;
+    width: 177px;
+    margin-left: 60px;
+    margin-top: 19px;
+    z-index: 3;
+}
+
+.hero-img-bg {
+    position: absolute;
+    z-index: 2;
+    right: 1%;
+    top: 75%;
 }
