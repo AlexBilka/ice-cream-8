@@ -1,5 +1,5 @@
 .customer-reviews {
-    background-color: #84A178;
+    background-color: var(--col-bg-dark);
     background-repeat: repeat-x;
     background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
     background-position: top 32px center;
@@ -39,10 +39,10 @@
     }
 
     .customer-reviews-feedback {
-        background: #84A178;
+        background: var(--col-bg-dark);
         border-radius: 10px;
         text-align: center;
-        color: #FCFCFC;
+        color: var(--col-text-secondary);
         margin-bottom: 32px;
         font-weight: 400;
         font-size: 12px;
@@ -58,7 +58,7 @@
             line-height: calc(26 / 14);
             text-align: center;
             letter-spacing: 0.04em;
-            color: #FCFCFC;
+            color: var(--col-text-secondary);
 
         }
 
@@ -90,7 +90,7 @@
         font-size: 20px;
         line-height: calc(37 / 20);
         text-align: center;
-        color: #131313;
+        color: var(--col-title-primary);
 
         @include mobile {}
 
@@ -132,7 +132,7 @@
             &.active,
             &:hover,
             &:focus {
-                background-color: #84A178;
+                background-color: var(--col-bg-dark);
 
             }
         }
