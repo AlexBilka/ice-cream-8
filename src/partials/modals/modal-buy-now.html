@@ -1,15 +1,15 @@
-<!-- <button class="example" type="button" data-modal-buy-now-open>openbuynow</button> -->
+<!-- <button class="example" type="button" data-modal-buy-now-open  >openbuynow</button>
 
+<button class="example" type="button" data-modal-buy-now-mobile-open >openbuynow-mobile</button> -->
 
-
-<div class="backdrop-buy-now is-hidden" data-modal-buy-now data-modal-buy-mobile-now>
+<div class="backdrop-buy-now  is-hidden" data-modal-buy-now>
     <div class="modal-buy-now">
         <p class="modal-buy-now-title">Buy now</p>
         <form class="modal-buy-now-form" autocomplete="off">
             <ul class="buy-now-list">
                 <li><input class="checkbox-input hide" name="buy-it" type="checkbox" id="check-ice-cream"
                         value="ice-cream">
-                    <label class="checkbox-label ice-cream" for="check-ice-cream"><span class="checkbox-wrap">ice
+                    <label class="checkbox-label ice-creams" for="check-ice-cream"><span class="checkbox-wrap">ice
                             cream</span></label>
                 </li>
                 <li><input class="checkbox-input hide" name="buy-it" type="checkbox" id="check-ice-coffee">
@@ -35,7 +35,7 @@
             <button class="modal-buy-now-button" type="submit">Submit</button>
 
         </form>
-        <button class="close-buy-now-button" type="button" data-modal-buy-now-close data-modal-buy-now-mobile-close> <svg class="close-icon" width="24"
+        <button class="close-buy-now-button" type="button" data-modal-buy-now-close > <svg class="close-icon" width="24"
                 height="24">
                 <use href="./images/vectors.svg#icon-icon-menu-close"></use>
             </svg>
@@ -60,13 +60,52 @@
         }
     })();
 </script>
+<div class="backdrop-buy-now is-hidden" data-modal-buy-now-mobile>
+    <div class="modal-buy-now">
+        <p class="modal-buy-now-title">Buy now</p>
+        <form class="modal-buy-now-form" autocomplete="off">
+            <ul class="buy-now-list">
+                <li><input class="checkbox-input hide" name="buy-it" type="checkbox" id="check-ice-cream"
+                        value="ice-cream">
+                    <label class="checkbox-label ice-creams" for="check-ice-cream"><span class="checkbox-wrap">ice
+                            cream</span></label>
+                </li>
+                <li><input class="checkbox-input hide" name="buy-it" type="checkbox" id="check-ice-coffee">
+                    <label class="checkbox-label ice-coffee" for="check-ice-coffee"><span class="checkbox-wrap">ice
+                            coffee</span></label>
+                </li>
+                <li><input class="checkbox-input hide" name="buy-it" type="checkbox" id="check-milkshake">
+                    <label class="checkbox-label milkshake" for="check-milkshake"><span
+                            class="checkbox-wrap">milkshake</span></label>
+                </li>
+            </ul>
+            <input type="text" name="user-name" class="modal-buy-now-input" placeholder="Name" required
+                pattern="[A-Za-z]{3,}"
+                title="The name cannot be shorter than 3 characters and must contain only Latin characters">
 
+            <input type="tel" name="user-tel" class="modal-buy-now-input" placeholder="Phone" required
+                pattern="[0-9]{10,}"
+                title=" The number cannot be shorter than 10 characters and must contain only numbers">
+
+            <textarea name="comment" class="modal-buy-now-input comment" placeholder="Comment" ></textarea>
+
+
+            <button class="modal-buy-now-button" type="submit">Submit</button>
+
+        </form>
+        <button class="close-buy-now-button" type="button" data-modal-buy-now-mobile-close > <svg class="close-icon" width="24"
+                height="24">
+                <use href="./images/vectors.svg#icon-icon-menu-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
 <script>
     (() => {
         const refs = {
             openModalBtn: document.querySelector("[data-modal-buy-now-mobile-open]"),
             closeModalBtn: document.querySelector("[data-modal-buy-now-mobile-close]"),
-            modal: document.querySelector("[data-modal-buy-mobile-now]"),
+            modal: document.querySelector("[data-modal-buy-now-mobile]"),
         };
 
         refs.openModalBtn.addEventListener("click", toggleModal);
