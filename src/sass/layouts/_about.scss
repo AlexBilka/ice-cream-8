@@ -195,5 +195,15 @@
 
 }
 
-// .about__btn {}
+.about__btn {
+    position: relative;
+    width: 164px;
+    height: 42px;
+    padding-right: 51px;
+}
 
+.icon-arrow-btn {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+}
