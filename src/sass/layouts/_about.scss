@@ -3,7 +3,11 @@
     padding-bottom: 50px;
 
     @include tablet {
-        padding-top: 60px;
+        padding-bottom: 86px;
+    }
+
+    @include desktop {
+        padding-bottom: 99px;
     }
 }
 
@@ -66,14 +70,19 @@
 }
 
 .about__wrap {
-    @media screen and (min-width: 768px) {
-        display: flex;
+    display: flex;   
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }        
+
+    @include tablet {        
         gap: 38px;
     }
 
     @include desktop {
-        gap: 109px;
-        align-items: center;
+        gap: 109px;        
     }
 }
 
@@ -118,8 +127,7 @@
 }
 
 .about__text-wraper {
-    width: 220px;
-    
+    width: 220px;    
 
     @media screen and (max-width: 767px) {
         text-align: center;
@@ -134,17 +142,14 @@
     }
 
     @include desktop {
-        width: 463px;
+        width: 540px;
     }
 }
 
 .text {
     font-weight: 400;
     font-size: 12px;
-    line-height: 162%;    
-    
-    // text-align: center;
-    
+    line-height: calc(21 / 12);    
     
     color: var(--col-text-secondary);
 
@@ -153,14 +158,14 @@
     }
 
     @include tablet {        
-        line-height: 176%;         
+        line-height: calc(21 / 12);         
         letter-spacing: 0.04em;
         
     }
 
     @include desktop {
         font-size: 16px;
-        line-height: 194%;
+        line-height: calc(28 / 16);
     }
 }
 
@@ -198,12 +203,14 @@
 .about__btn {
     position: relative;
     width: 164px;
-    height: 42px;
-    padding-right: 51px;
+    height: 42px;    
+    text-align: left;    
 }
 
 .icon-arrow-btn {
     position: absolute;
     right: 35px;
     top: 50%;
+    transform: translateY(-50%);
+    fill: currentColor;
 }
