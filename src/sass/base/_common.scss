@@ -20,11 +20,16 @@ body {
   margin: 0 auto;
   max-width: 320px;
 
+  @include mobile {
+    max-width: 480px;
+  }
+
   @include tablet {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
+
   @include desktop {
     max-width: 1200px;
     padding-left: 16px;
