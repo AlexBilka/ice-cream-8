@@ -1,3 +1,5 @@
+<!-- --------------------------------------MAX FARMAHA WORKS IN THIS FIELD---------------------------------------------- -->
+
 <div class="modal-products__backdrop is-hidden" products-modal>
   <div class="modal-products">
     <button
@@ -117,6 +119,7 @@
     </form>
   </div>
 </div>
+<!-- --------------------------------------MAX FARMAHA WORKS IN THIS FIELD---------------------------------------------- -->
 
 <!-- -------------------------------SCRIPT FOR ENABLED/DISABLED MODAL BUTTON-------------------------------------- -->
 <script>
@@ -136,16 +139,32 @@
 
 <!-- -------------------------------SCRIPT FOR CLOSE/OPEN MODAL WINDOW-------------------------------------- -->
 <script>
-  const refs = {
-    openModalBtn: document.querySelector('[products-modal-open]'),
-    closeModalBtn: document.querySelector('[products-modal-close]'),
-    modal: document.querySelector('[products-modal]'),
-  };
+  const openModalBtn = document.querySelector('[products-modal-open]');
+  const closeModalBtn = document.querySelector('[products-modal-close]');
+  const modal = document.querySelector('[products-modal]');
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  openModalBtn.addEventListener('click', toggleModal);
+  closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    modal.classList.toggle('is-hidden');
   }
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.toggle('is-hidden');
+  });
 </script>
+
+<!-- -----------------------------------------------------------------------------------------------------------
+1. Відкриття/закриття модального вікна та бекдропу працює по кліку на відповідних кнопках
+2. Добавив курсор авторський при ховері на кнопки в модальному вікні
+3. Добавив анімацію scale при відкритті/закритті модального вікна
+4. Добавив анімацію scale при ховері/фокусі на кнопку закриття модального вікна
+5. Пофіксив щоб анімація починалась з моменту відкриття  модального вікна
+6. Переписані всі стилі на scss з амперсантами
+7. Всі js скрипти прописані в середині html паршалу
+8. Переписані всі можливі медіа правила через міксини
+9. Переписані основні кольори та функції анімації через сss змінні
+
+10. Добавав в js код для модального вікна, який закриває його при будь якому кліку не в тіло модального вікна
+-----------------------------------------------------------------------------------------------------------  -->

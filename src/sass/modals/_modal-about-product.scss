@@ -4,10 +4,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
+  background-color: var(--col-backdrop);
 
-  z-index: 2;
+  z-index: 999;
 
   transition-property: all;
   transition-duration: var(--animation-time);
@@ -17,8 +16,8 @@
 .modal-products {
   width: calc(100% - 40px);
   min-width: 280px;
-  background-color: #fcfcfc;
-  border: 2px solid #f8d24e;
+  background-color: var(--col-bg-light);
+  border: 2px solid var(--col-default);
   border-radius: 10px;
   padding: 28px 20px;
 
@@ -26,13 +25,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  visibility: visible;
 
   transition-property: all;
   transition-duration: var(--animation-time);
   transition-timing-function: var(--cubic-function);
 
-  &__backdrop.is-hidden & {
+  .modal-products__backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
+    visibility: hidden;
   }
 
   &__close-btn {
@@ -56,7 +57,7 @@
 
     &:hover,
     &:focus {
-      color: #f8d24e;
+      color: var(--col-default);
       transform: scale(1.3);
     }
   }
@@ -130,7 +131,7 @@
     width: 100%;
     padding: 11px;
     background-color: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84a178;
+    border: var(--border-input);
     border-radius: 10px;
     outline: transparent;
 
@@ -139,7 +140,7 @@
     transition-timing-function: var(--cubic-function);
 
     &:focus {
-      border-color: #f8d24e;
+      border-color: var(--col-default);
     }
     &::placeholder {
       font-size: 14px;
@@ -176,7 +177,7 @@
     font-weight: 600;
     font-size: 14px;
     color: #131313;
-    background-color: #f8d24e;
+    background-color: var(--col-default);
     border: none;
     border-radius: 10px;
     display: block;
@@ -189,15 +190,15 @@
     transition-timing-function: var(--cubic-function);
 
     &:hover {
-      background-color: #0a8817;
+      background-color: var(--col-accent);
     }
     &:focus {
-      background-color: #0a8817;
+      background-color: var(--col-accent);
       color: #fcfcfc;
       outline: transparent;
     }
     &:disabled {
-      background-color: #ababab;
+      background-color: var(--col-btn-bg-disabled);
       cursor: inherit;
     }
   }
@@ -235,56 +236,58 @@
     box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
   }
 
-  &__wrap {
+  .modal-products__backdrop:not(.is-hidden) &__wrap {
     animation-name: transformCircle;
     animation-timing-function: var(--cubic-function);
     animation-direction: alternate;
     animation-iteration-count: 4;
+
+    &--first {
+      animation-duration: 400ms;
+      animation-delay: 400ms;
+    }
+
+    &--second {
+      animation-duration: 350ms;
+      animation-delay: 600ms;
+    }
+
+    &--third {
+      animation-duration: 450ms;
+      animation-delay: 200ms;
+    }
+
+    &--fourth {
+      animation-duration: 300ms;
+      animation-delay: 800ms;
+    }
   }
 
-  &__wrap--first {
-    animation-duration: 400ms;
-    animation-delay: 200ms;
-  }
-
-  &__wrap--second {
-    animation-duration: 350ms;
-    animation-delay: 400ms;
-  }
-
-  &__wrap--third {
-    animation-duration: 450ms;
-  }
-
-  &__wrap--fourth {
-    animation-duration: 300ms;
-    animation-delay: 600ms;
-  }
-
-  &__text {
+  .modal-products__backdrop:not(.is-hidden) &__text {
     animation-name: transformText;
     animation-timing-function: var(--cubic-function);
     animation-direction: alternate;
     animation-iteration-count: 4;
-  }
 
-  &__text--first {
-    animation-duration: 400ms;
-    animation-delay: 200ms;
-  }
+    &--first {
+      animation-duration: 400ms;
+      animation-delay: 400ms;
+    }
 
-  &__text--second {
-    animation-duration: 350ms;
-    animation-delay: 400ms;
-  }
+    &--second {
+      animation-duration: 350ms;
+      animation-delay: 600ms;
+    }
 
-  &__text--third {
-    animation-duration: 450ms;
-  }
+    &--third {
+      animation-duration: 450ms;
+      animation-delay: 200ms;
+    }
 
-  &__text--fourth {
-    animation-duration: 300ms;
-    animation-delay: 600ms;
+    &--fourth {
+      animation-duration: 300ms;
+      animation-delay: 800ms;
+    }
   }
 
   &__value {
