@@ -8,6 +8,10 @@ body {
   color: var(--col-text-primary);
 }
 
+a {  
+  cursor: url(../images/products/cursor.png), pointer;
+}
+
 .section {
   padding-bottom: 60px;
   background-color: var(--col-bg-dark);
@@ -20,14 +24,23 @@ body {
   margin: 0 auto;
   max-width: 320px;
 
+  @include mobile {
+    max-width: 480px;
+  }
+
   @include tablet {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
+
   @include desktop {
     max-width: 1200px;
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

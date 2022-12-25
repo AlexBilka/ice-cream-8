@@ -1,0 +1,251 @@
+.contacts {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 24%,
+    var(--col-bg-dark) 24%,
+    var(--col-bg-dark) 100%
+  );
+
+  @include tablet {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 45%,
+      var(--col-bg-dark) 45%,
+      var(--col-bg-dark) 100%
+    );
+    padding-bottom: 40px;
+  }
+
+  @include desktop {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 17%,
+      var(--col-bg-dark) 17%,
+      var(--col-bg-dark) 100%
+    );
+    padding-bottom: 120px;
+  }
+}
+
+.grid-contacts {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+}
+
+.grid-contacts__item {
+  width: 100%;
+
+  @include tablet {
+    width: calc((100% - 32px) / 3);
+  }
+
+  @include desktop {
+    width: calc((100% - 64px) / 3);
+  }
+}
+
+.representation {
+  background-color: var(--col-bg-primary);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  @media screen and (max-width: 767px) {
+    padding: 40px 32px 24px;
+  }
+
+  @include tablet {
+    padding: 40px 24px;
+  }
+
+  @include desktop {
+    padding: 40px;
+  }
+}
+
+.representation__category {
+  display: inline-block;
+  padding: 4px 22px;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  background: var(--col-default);
+  border-radius: 6px;
+
+  @include tablet {
+    padding: 4px 14px;
+
+    font-size: 16px;
+    line-height: calc(22 / 16);
+
+    margin-bottom: 32px;
+  }
+}
+
+.representation__city {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+
+  margin-bottom: 8px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    margin-bottom: 8px;
+  }
+}
+
+.representation-address {
+  margin-bottom: 24px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+
+  color: #d6936d;
+
+  &:hover,
+  &:focus {
+    text-decoration-line: underline;
+  }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(26 / 14);
+
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(29 / 16);
+  }
+}
+
+.representation__wrap-middle {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.opening-times {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+
+  @include desktop {
+    gap: 12px;
+  }
+}
+
+.opening-times__days {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(26 / 14);
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+  }
+}
+
+.opening-times__hours {
+  color: #ababab;
+}
+
+.representation-contacts {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+
+  padding-top: 24px;
+
+  @include tablet {
+    gap: 4px;
+    padding-top: 32px;
+  }
+}
+
+.representation-contacts__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(19 / 12);
+
+  &:hover,
+  &:focus {
+    text-decoration-line: underline;
+  }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(21 / 14);
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(24 / 16);
+  }
+}
+
+// <------buttons------ >
+.contacts-btm__list {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include tablet {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+}
+
+.contacts-btn {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 196px;
+}
