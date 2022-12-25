@@ -30,7 +30,7 @@
         width: 1167px;
         right: 16px;
 
-        bottom: 46px;
+        bottom: 35px;
         height: 0px;
         border: 1px solid #e1e1e1;
       }
@@ -46,7 +46,7 @@
 
     color: var(--col-text-secondary);
     @include tablet {
-      font-weight: 400;
+      font-weight: 700;
       margin-bottom: 8px;
       font-size: 26px;
       line-height: calc(32 / 26);
@@ -54,14 +54,14 @@
     }
     @include desktop {
       margin-bottom: 14px;
-      font-weight: 400px;
+      font-weight: 400;
       font-size: 30px;
       line-height: calc(37 / 30);
     }
   }
   &__text--under {
     margin-bottom: 60px;
-
+    font-weight: 700;
     font-size: 34px;
     line-height: calc(41 / 34);
     letter-spacing: 0.04em;
