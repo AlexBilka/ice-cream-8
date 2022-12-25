@@ -48,36 +48,73 @@
     display: flex;
     flex-direction: column;
     }
-    
+
     .franchise-modal__close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 20px;
-    height: 20px;
-    border: transparent;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // padding: 0;
+        padding: 3px;
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+        transition: box-shadow var(--animation-time) var(--cubic-function);
+        @include tablet {
+          padding: 5px;
+        }
+      }
+      .franchise-modal__close:hover,
+      .franchise-modal__close:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      }
+      .franchise-modal__icon {
+        width: 20px;
+        height: 20px;
+        fill: var(--col-text-primary);
+        transition: fill var(--animation-time) var(--cubic-function);
+        @include tablet {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .franchise-modal__close:hover .franchise-modal__icon,
+      .franchise-modal__closen:focus .franchise-modal__icon {
+        fill: var(--col-btn-default);
+      }
+      
+    
+    // .franchise-modal__close {
+    // position: absolute;
+    // top: 12px;
+    // right: 12px;
+    // width: 20px;
+    // height: 20px;
+    // border: transparent;
+    // background-color: transparent;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 
-    @include tablet {
-    width: 24px;
-    height: 24px;
-    }
-    }
+    // @include tablet {
+    // width: 24px;
+    // height: 24px;
+    // }
+    // }
 
-    .franchise-modal__close:hover,
-    .franchise-modal__close:focus {
-    width: 28px;
-    height: 28px;
-    transition: color 250ms linear;
-    }
+    // .franchise-modal__close:hover,
+    // .franchise-modal__close:focus {
+    // width: 28px;
+    // height: 28px;
+    // transition: color 250ms linear;
+    // }
 
-    .franchise-modal__icon:hover,
-    .franchise-modal__icon:focus {
-    filter: drop-shadow(0 0 10px #0A8817)
-    }
+    // .franchise-modal__icon:hover,
+    // .franchise-modal__icon:focus {
+    // filter: drop-shadow(0 0 10px #0A8817)
+    // }
       
     .franchise-modal__title {
     font-family: Seymour One;
@@ -196,8 +233,7 @@
     background: rgba(248, 210, 78, 0.1);
     border: var(--border-input);
     border-radius: 10px;
-    margin-left: 40px;  
-    margin-right: 40px;
+    margin: 0 auto;
     margin-bottom: 24px;
     
     @include tablet {
@@ -205,6 +241,8 @@
     height: 84px;
     font-size: 14px;
     line-height: calc(20 / 14);
+    margin-left: 40px;  
+    margin-right: 40px;
     margin-bottom: 32px;
     }
 
