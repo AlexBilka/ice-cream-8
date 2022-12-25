@@ -1,5 +1,5 @@
 .customer-reviews {
-    background-color: #84A178;
+    background-color: var(--col-bg-dark);
     background-repeat: repeat-x;
     background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
     background-position: top 32px center;
@@ -39,27 +39,33 @@
     }
 
     .customer-reviews-feedback {
-        background: #84A178;
+        background: var(--col-bg-dark);
         border-radius: 10px;
         text-align: center;
-        color: #FCFCFC;
+        color: var(--col-text-secondary);
         margin-bottom: 32px;
         font-weight: 400;
         font-size: 12px;
-        line-height: 255%;
+        line-height: calc(31 / 12);
         padding: 35px 39px;
 
         @include mobile {}
 
         @include tablet {
             padding: 28px 80px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: calc(26 / 14);
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: var(--col-text-secondary);
 
         }
 
         @include desktop {
             font-weight: 500;
             font-size: 16px;
-            line-height: 186%;
+            line-height: calc(30 / 16);
             padding: 43px 109px;
             margin-bottom: 32px;
             letter-spacing: 0.04em;
@@ -82,17 +88,19 @@
     .customer-reviews-clientname {
         font-weight: 500;
         font-size: 20px;
-        line-height: 186%;
+        line-height: calc(37 / 20);
         text-align: center;
-        color: #131313;
+        color: var(--col-title-primary);
 
         @include mobile {}
 
-        @include tablet {}
+        @include tablet {
 
-        @include desktop {
             font-size: 16px;
+            line-height: calc(30 / 16);
         }
+
+        @include desktop {}
     }
 
     // -------SWIPES----------------
@@ -124,7 +132,7 @@
             &.active,
             &:hover,
             &:focus {
-                background-color: #84A178;
+                background-color: var(--col-bg-dark);
 
             }
         }
