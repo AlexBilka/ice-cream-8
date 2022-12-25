@@ -29,6 +29,7 @@
   pointer-events: none;
 }
 .modal-buy-now {
+  z-index: 5;
   position: relative;
   padding-top: 28px;
   padding-bottom: 29px;
@@ -36,16 +37,22 @@
   padding-right: 28px;
   min-width: 280px;
   max-height: 991px;
+  height: 100%;
   background-color: var(--col-bg-light);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   transition: transform var(--animation-time) var(--cubic-function);
-  overflow: auto;
+  @media screen and (max-width: 479px) {
+    overflow-y: scroll;
+  }
   @include tablet {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 54px;
@@ -54,6 +61,11 @@
     max-height: 644px;
   }
 }
+// .modal-buy-now-container {
+//   height: 100%;
+//   width: 100%;
+//   overflow: auto;
+// }
 .backdrop.is-hidden .modal-buy-now {
   transform: translate(-50%, -50%);
 }
@@ -341,7 +353,7 @@ textarea {
   background-color: transparent;
   transition: box-shadow var(--animation-time) var(--cubic-function);
   @include tablet {
-  padding: 5px;
+    padding: 5px;
   }
 }
 .close-buy-now-button:hover,
