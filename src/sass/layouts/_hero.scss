@@ -1,164 +1,274 @@
-    @include mobile {
-        .hero {
-            background-color: var(--col-bg-dark);
-        }
-        .hero-tittle {
-            font-family: 'Seymour One', sherif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 26px;
-            line-height: 96.5%;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: var(--col-bg-light);
-            padding-top: 50px;
-        }
-        .hero-tittle-span {
-            font-size: 34px;
-            line-height: 96.5%;
-        }
-        .hero-btn {
-            margin-top: 32px;
-        }
-        .first {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 1.25;
-            padding: 11px 26px;
-            align-items: center;
-            text-align: center;
-            border-radius: 8px;
-            border: 2px solid var(--col-default);
-            background-color: var(--col-bg-dark);
-            margin-right: 12px;
-            cursor: pointer;
-        }
-        .first a {
-            text-decoration: none;
-            color: var(--col-btn-default);
-        }
-        .second {
-            border: none;
-            background-color: var(--col-bg-dark);
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 1.24;
-            align-items: center;
-            text-align: center;
-            text-decoration-line: underline;
-            cursor: pointer;
-            ;
-        }
-        .second a {
-            color: var(--col-menu-default)
-        }
-        .wrap-hero-btn {
-            display: flex;
-        }
-        .hero-img-icecream {
-            position: relative;
-            width: 177px;
-            margin-left: 60px;
-            margin-top: 19px;
-            z-index: 3;
-        }
-        .wrap-left {
-            display: none;
-        }
-        .hero-arrow {
-            display: none;
-        }
-        .hero-list {
-            display: none;
-        }
-        .left {
-            width: 107px;
-            position: absolute;
-            z-index: 2;
-            left: 0;
-            top: 75%;
-        }
-        .right {
-            width: 126px;
-            position: absolute;
-            z-index: 2;
-            right: 0;
-            top: 75%;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .left {
-            width: 157px;
-            position: absolute;
-            z-index: 2;
-            left: 22px;
-            top: 75%;
-        }
-        .right {
-            position: absolute;
-            right: 0;
-            width: 190px;
-            z-index: 2;
-            top: 71%;
-        }
-    }
-    
-    @include tablet {
-        .hero-tittle {
-            width: 247px;
-        }
-        .hero-img {
-            width: 152px;
-            margin-top: 12px;
-            position: relative;
-            z-index: 3;
-        }
-        .hero-p {
-            width: 187px;
-            color: var(--col-menu-focus);
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 140%;
-            margin-top: 46px;
-            margin-left: 32px;
-        }
-        .hero-arrow {
-            width: 40px;
-            margin-top: 12px;
-            cursor: pointer;
-            position: absolute;
-            top: 400px;
-            left: 216px;
-        }
-        .wrap-left {
-            display: flex;
-        }
-        .hero-img-icecream {
-            width: 268px;
-            margin-top: 40px;
-        }
-        .wrap-hero {
-            display: flex;
-        }
-        .left {
-            width: 110px;
-            position: absolute;
-            z-index: 2;
-            left: 0;
-            top: 68%;
-        }
-        .right {
-            position: absolute;
-            right: 0;
-            width: 182px;
-            z-index: 2;
-            top: 63%;
-        }
-    }
+                    .hero {
+                        background-color: var(--col-bg-dark);
+                        position: relative;
+                    }
+                    
+                    .hero_points {
+                        position: absolute;
+                        min-width: 320px;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 2;
+                        display: none;
+                    }
+                    
+                    .hero_img_icecream {
+                        position: relative;
+                        width: 177px;
+                        margin-left: 62px;
+                        z-index: 3;
+                    }
+                    
+                    .hero_tittle {
+                        font-family: 'Seymour One';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 26px;
+                        line-height: 33px;
+                        letter-spacing: 0.04em;
+                        text-transform: uppercase;
+                        color: var(--col-title-secondary);
+                        padding-top: 50px;
+                        padding-bottom: 32px;
+                    }
+                    
+                    .hero_tittle_span {
+                        font-size: 34px;
+                    }
+                    
+                    .hero_btn_first {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 15px;
+                        display: flex;
+                        padding: 11px 26px;
+                        border: 2px solid var(--col-btn-bg-default);
+                        border-radius: 8px;
+                        background-color: transparent;
+                        margin-bottom: 19px;
+                    }
+                    
+                    .hero_btn_first a {
+                        align-items: center;
+                        text-align: center;
+                        color: var(--col-btn-disabled);
+                        text-decoration: none;
+                    }
+                    
+                    .hero_btn_second {
+                        background-color: transparent;
+                        border: none;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 15px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        text-decoration-line: underline;
+                        margin-bottom: 21px;
+                    }
+                    
+                    .hero_btn_second a {
+                        color: var(--col-default);
+                    }
+                    
+                    .wrap_btn_hero {
+                        display: flex;
+                        gap: 12px;
+                    }
+                    
+                    .hero_p {
+                        display: none;
+                    }
+                    
+                    .hero_img_plate {
+                        display: none;
+                    }
+                    
+                    .hero_numbers {
+                        display: none;
+                    }
+                    
+                    .hero_number {
+                        display: none;
+                    }
+                    
+                    .hero_cafes {
+                        display: none;
+                    }
+                    
+                    .hero_arrow {
+                        display: none;
+                    }
+                    
+                    @include mobile {
+                        .hero_points {
+                            min-width: 320px;
+                        }
+                        .hero-img-icecream {
+                            width: 177px;
+                            margin-left: 118px;
+                        }
+                        .hero_arrow {
+                            display: none;
+                        }
+                    }
+                    
+                    @include tablet {
+                        .hero {
+                            min-width: 768px;
+                            height: 356px;
+                        }
+                        .hero_img_icecream {
+                            width: 268px;
+                            right: -69px;
+                            margin-top: 13px;
+                        }
+                        .hero_tittle {
+                            width: 247px;
+                            padding-top: 0;
+                        }
+                        .hero_p {
+                            display: block;
+                            width: 170px;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 140%;
+                            color: var(--col-title-secondary);
+                            position: absolute;
+                            left: 188px;
+                            bottom: 50px;
+                        }
+                        .hero_img_plate {
+                            display: block;
+                            width: 152px;
+                            position: absolute;
+                            transform: translateX(-5%);
+                            top: 200px;
+                        }
+                        .hero_numbers {
+                            display: block;
+                            text-align: right;
+                            margin-left: auto;
+                            padding-top: 28px;
+                        }
+                        .hero_number {
+                            display: block;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 28px;
+                            line-height: 34px;
+                            text-align: right;
+                            letter-spacing: 0.04em;
+                            text-transform: uppercase;
+                            color: var(--col-title-primary);
+                        }
+                        .hero_cafes {
+                            display: block;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 8px;
+                            line-height: 10px;
+                            text-align: right;
+                            color: var(--col-bg-light)
+                        }
+                        .hero_points {
+                            bottom: 60px;
+                        }
+                        .wrap_hero {
+                            display: flex;
+                            padding-top: 14px;
+                        }
+                        .hero_img_icecream {
+                            width: 268px;
+                        }
+                        .hero_arrow {
+                            position: absolute;
+                            width: 40px;
+                            bottom: 23px;
+                            left: 187px;
+                            display: block;
+                        }
+                    }
+                    
+                    @include desktop {
+                        .hero {
+                            min-width: 100%;
+                            min-height: 573px;
+                        }
+                        .hero_img_plate {
+                            width: 225px;
+                            z-index: 3;
+                            padding-top: 76px;
+                        }
+                        .hero_tittle {
+                            font-size: 38px;
+                            width: 367px;
+                            padding-top: 45px;
+                        }
+                        .hero_btn_first {
+                            padding: 12px 34px;
+                            font-size: 14px;
+                        }
+                        .hero_btn_second {
+                            font-size: 14px;
+                        }
+                        .hero_img_icecream {
+                            width: 456px;
+                            margin-left: 213px;
+                            margin-top: 0;
+                        }
+                        .hero_number {
+                            font-size: 46px;
+                            padding-bottom: 6px;
+                        }
+                        .hero_cafes {
+                            font-size: 14px;
+                            padding-bottom: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                        .hero_numbers {
+                            padding-top: 53px;
+                            margin-left: 130px;
+                        }
+                        .hero_points {
+                            min-width: 1200px;
+                            bottom: 0;
+                            z-index: 2;
+                        }
+                        .wrap_btn_hero {
+                            gap: 34px;
+                        }
+                        .hero_p {
+                            bottom: 150px;
+                            left: 340px;
+                            width: 200px;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                        }
+                        button {
+                            cursor: pointer;
+                        }
+                        .hero_arrow {
+                            width: 40px;
+                            position: absolute;
+                            bottom: 110px;
+                            left: 342px;
+                            display: block;
+                        }
+                    }

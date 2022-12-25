@@ -1,48 +1,82 @@
-<section class="hero">
+<section class="hero" id="heroine">
     <div class="container">
-        <div class="wrap-hero">
-            <div class="wrapper-left-side">
-                <h1 class="hero-tittle">
+        <div class="wrap_hero">
+            <div class="hero_content">
+                <h1 class="hero_tittle">
                     ice cream made with
-                    <span class="hero-tittle-span"> passion </span>
+                    <span class="hero_tittle_span"> passion </span>
                 </h1>
 
-                <div class="wrap-hero-btn">
-                    <button type="button" class="hero-btn first">
-            <a href="#">Products </a>
-          </button>
+                <div class="wrap_btn_hero">
+                    <button type="button" class="hero_btn_first">
+                    <a href="#">Products </a>
+                    </button>
 
-                    <button type="button" class="hero-btn second">
+                    <button type="button" class="hero_btn_second">
             <a href="#">How it’s made?</a>
           </button>
                 </div>
+                <p class="hero_p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 
-                <!-- картинка +lorem -->
-
-                <div class="wrap-left">
-                    <img class="hero-img" src="./images/hero-icekreams-tab.png" alt="many icecream" />
-                    <p class="hero-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    </p>
-                </div>
-
-                <a href="# ">
-                    <img class="hero-arrow" src="./images/hero-arrow-tab.png " alt=" " />
-                </a>
+                </p>
+                <img class="hero_arrow" src="./images/hero/Arrow-desk.png" alt="">
             </div>
 
-            <div class="wrapper-rigt-side">
-                <img class="hero-img-icecream" src="./images/hero-icecream-mob.png " alt="icecream " />
 
-                <img class="hero-img-bg left" src="./images/hero-points-left-tab.png " alt="background " />
-                <img class="hero-img-bg right" src="./images/hero-points-right-tab.png " alt="background " />
+            <picture>
 
-                <!-- <ul class="hero-list">
-                    <li>16 cafes</li>
-                    <li>23 food trucks</li>
+                <source srcset="./images/hero/hero-plate-desk.png 1px,./images/hero/hero-plate-desk2x.png 2x" media="(min-width:1200px)">
+                <source srcset="./images/hero/hero-plate-tab.png 1px,./images/hero/hero-plate-tab2x.png 2x" media="(min-width:768px)">
+            </picture>
+            <img class="hero_img_plate" src="./images/hero/hero-icekreams-tab.png" alt="plate of icecream" width="225">
 
-                </ul> -->
+
+            <picture>
+                <source srcset="./images/hero/hero-icecream-desk.png 1x,./images/hero/hero-icecream-desk-2x.png 2x" media="(min-width:1200px)">
+                <source srcset="./images/hero/hero-icecream-tab.png 1x,./images/hero/hero-icecream-tab2x.png 2x" media="(min-width:768px)">
+                <source srcset="./images/hero/hero-icecream-mob.png 1x,./images/hero/hero-icecream-mob2x.png 2x" media="(max-width:767px)">
+
+            </picture>
+
+            <img class="hero_img_icecream" srcset="./images/hero/hero-icecream-desk.png 1x,./images/hero/hero-icecream-desk-2x.png 2x" src="./images/hero/hero-icecream-mob.png" width="436px" alt="icecream" />
+
+
+
+
+            <!-- Боковые цифры -->
+            <div class="hero_numbers">
+                <span class="hero_number">16</span>
+                <p class="hero_cafes"> cafes</p>
+                <span class="hero_number">23 </span>
+                <p class="hero_cafes"> food trucks</p>
             </div>
+
+
+            <!-- Точки -->
+            <picture>
+
+                <source srcset="./images/hero/hero-points-desk.png 1x,./images/hero/hero-icecream-desk-2x.png 2x" media="(min-width:1200px)">
+                <source srcset="./images/hero/hero-points-tab.png 1x,./images/hero/hero-points-tab2x.png 2x" media="(min-width:768px)">
+                <source srcset="./images/hero/hero-points-mob.png 1x,./images/hero/hero-points-mob2x.png 2x" media="(max-width:767px)">
+
+            </picture>
+            <img class="hero_points" srcset="./images/hero/hero-points-desk.png 1x,./images/hero/hero-icecream-desk-2x.png 2x" src="./images/hero/hero-points-desk.png" width="1200">
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    </div>
     </div>
 </section>
