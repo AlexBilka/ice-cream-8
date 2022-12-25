@@ -146,7 +146,7 @@
         }
     &:hover,
     &:focus {
-    border: 2px solid #0A8817;
+    // border: 2px solid #0A8817;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     }
@@ -196,7 +196,8 @@
     background: rgba(248, 210, 78, 0.1);
     border: var(--border-input);
     border-radius: 10px;
-    margin: 0 auto;
+    margin-left: 40px;  
+    margin-right: 40px;
     margin-bottom: 24px;
     
     @include tablet {
@@ -209,7 +210,7 @@
 
     &:hover,
     &:focus {
-    border: 2px solid #0A8817;
+    // border: 2px solid #0A8817;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     }
