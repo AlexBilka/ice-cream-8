@@ -151,7 +151,7 @@ textarea {
 }
 .close-buy-now-button:hover,
 .close-buy-now-button:focus {
-  transition: box-shadow 250ms linear;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hide {
   position: absolute;
