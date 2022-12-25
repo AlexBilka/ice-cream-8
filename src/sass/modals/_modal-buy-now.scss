@@ -13,7 +13,9 @@
   --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-time: 250ms;
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 .backdrop-buy-now {
   z-index: 6;
   position: fixed;
