@@ -69,8 +69,14 @@
 
     .franchise-modal__close:hover,
     .franchise-modal__close:focus {
-    fill: #0A8817;
+    width: 28px;
+    height: 28px;
     transition: color 250ms linear;
+    }
+
+    .franchise-modal__icon:hover,
+    .franchise-modal__icon:focus {
+    filter: drop-shadow(0 0 10px #0A8817)
     }
       
     .franchise-modal__title {
