@@ -1,134 +1,158 @@
-.customer-reviews {
-    background-color: #84A178;
-    background-repeat: repeat-x;
-    background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
-    background-position: top 32px center;
-    padding: 0px 10px 40px 10px;
-    width: 100%;
+.customer-reviews-section {
+    overflow-x: hidden;
 
-    @include mobile {}
-
-    @include tablet {
-        background-image: url(../images/customer-reviews/background-tablet1x.jpg);
-        background-position: top 144px center;
-        padding: 0px 32px 80px 32px;
-    }
-
-    @include desktop {
-        background-image: url(../images/customer-reviews/backgroud-desktop1x.jpg);
-        background-position: top 98px center;
-        padding: 0px 94px 100px 94px;
-
-    }
-
-    .customer-reviews-banner {
-        margin-bottom: 80px;
-        border-radius: 13px;
+    .customer-reviews-swiper {
+        background-color: var(--col-bg-dark);
+        background-repeat: repeat-x;
+        background-image: url(../images/customer-reviews/backgroud-mobile1x.jpg);
+        background-position: top 32px center;
+        padding-bottom: 40px;
+        width: 100%;
 
         @include mobile {}
 
         @include tablet {
-            margin-bottom: 100px;
-            border-radius: 18px;
+            background-image: url(../images/customer-reviews/background-tablet1x.jpg);
+            background-position: top 144px center;
+            padding-bottom: 80px;
         }
 
         @include desktop {
-            margin-bottom: 140px;
-            border-radius: 25px;
-        }
-    }
-
-    .customer-reviews-feedback {
-        background: #84A178;
-        border-radius: 10px;
-        text-align: center;
-        color: #FCFCFC;
-        margin-bottom: 32px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 255%;
-        padding: 35px 39px;
-
-        @include mobile {}
-
-        @include tablet {
-            padding: 28px 80px;
+            background-image: url(../images/customer-reviews/backgroud-desktop1x.jpg);
+            background-position: top 98px center;
+            padding-bottom: 100px;
 
         }
 
-        @include desktop {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 186%;
-            padding: 43px 109px;
-            margin-bottom: 32px;
-            letter-spacing: 0.04em;
-        }
-    }
+        .customer-reviews-item {
+            padding: 0px 10px;
+            width: 100%;
 
-    .customer-reviews-client {
-        margin: 0 auto 32px auto;
-        width: auto;
-        height: auto;
-        border-radius: 50%;
+            @include mobile {}
 
-        @include mobile {}
+            @include tablet {
+                padding: 0px 32px;
+            }
 
-        @include tablet {}
+            @include desktop {
+                padding: 0px 94px;
 
-        @include desktop {}
-    }
+            }
 
-    .customer-reviews-clientname {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 186%;
-        text-align: center;
-        color: #131313;
+            .customer-reviews-banner {
+                margin-bottom: 80px;
+                border-radius: 13px;
 
-        @include mobile {}
+                @include mobile {}
 
-        @include tablet {}
+                @include tablet {
+                    margin-bottom: 100px;
+                    border-radius: 18px;
+                }
 
-        @include desktop {
-            font-size: 16px;
-        }
-    }
+                @include desktop {
+                    margin-bottom: 140px;
+                    border-radius: 25px;
+                }
+            }
 
-    // -------SWIPES----------------
-    .customer-reviews-swipes {
-        display: flex;
-        gap: 18px;
-        margin-top: 12px;
-        justify-content: center;
+            .customer-reviews-client {
+                margin: 0 auto 32px auto;
+                width: auto;
+                height: auto;
+                border-radius: 50%;
 
-        @include mobile {}
+                @include mobile {}
 
-        @include tablet {
-            margin-top: 32px;
-        }
+                @include tablet {}
 
-        @include desktop {
-            margin-top: 32px;
-        }
+                @include desktop {}
+            }
 
+            .customer-reviews-feedback {
+                background: var(--col-bg-dark);
+                border-radius: 10px;
+                text-align: center;
+                color: var(--col-text-secondary);
+                margin-bottom: 32px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: calc(31 / 12);
+                padding: 35px 39px;
 
-        .customer-reviews-swipepoint {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #D9D9D9;
-            cursor: pointer;
+                @include mobile {}
 
+                @include tablet {
+                    padding: 28px 80px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: calc(26 / 14);
+                    text-align: center;
+                    letter-spacing: 0.04em;
+                    color: var(--col-text-secondary);
 
-            &.active,
-            &:hover,
-            &:focus {
-                background-color: #84A178;
+                }
 
+                @include desktop {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: calc(30 / 16);
+                    padding: 43px 109px;
+                    margin-bottom: 32px;
+                    letter-spacing: 0.04em;
+                }
+            }
+
+            .customer-reviews-clientname {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: calc(37 / 20);
+                text-align: center;
+                color: var(--col-title-primary);
+
+                @include mobile {}
+
+                @include tablet {
+
+                    font-size: 16px;
+                    line-height: calc(30 / 16);
+                }
+
+                @include desktop {}
             }
         }
 
+        // -------SWIPES----------------
+        .customer-reviews-swipes {
+            display: flex;
+            gap: 18px;
+            margin-top: 12px;
+            justify-content: center;
 
+            @include mobile {}
+
+            @include tablet {
+                margin-top: 32px;
+            }
+
+            @include desktop {
+                margin-top: 32px;
+            }
+
+
+            .customer-reviews-swipepoint {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #D9D9D9;
+
+                &.active,
+                &:hover,
+                &:focus {
+                    background-color: var(--col-bg-dark);
+
+                }
+            }
+        }
     }
 }

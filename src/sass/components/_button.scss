@@ -5,7 +5,7 @@
   padding: 12px 34px;
   border-radius: 10px;
 
-  cursor: pointer;
+  cursor: url(../images/products/cursor.png), pointer;
 
   color: var(--col-btn-default);
   background-color: var(--col-btn-bg-default);
@@ -24,12 +24,14 @@
   &:focus {
     color: var(--col-btn-focus);
     background-color: var(--col-btn-bg-focus);
+    fill: var(--col-btn-focus);
   }
 
   &--transparent {
     font-family: inherit;
     padding: 12px 34px;
     border-radius: 10px;
+    height: 42px;
 
     font-weight: 600;
     font-size: 14px;
@@ -43,10 +45,13 @@
     &:hover {
       color: var(--col-btn-hover);
       border: 2px solid #0a8817;
+      background-color: transparent;
     }
 
     &:focus {
       color: var(--col-btn-focus);
+      background-color: transparent;
+      fill: var(--col-btn-focus);
     }
   }
 }
