@@ -1,0 +1,71 @@
+<header class="header">
+  <div class="container header--container">
+      <a class="header__logo" href="./index.html">
+          <picture>
+              <source srcset="./images/header/header-logo@1x.png 1x, ./images//header/header-logo@2x.png 2x" media="(min-width: 1200px)">
+              <source srcset="./images//header/header-logo-tab@1x.png 1x, ./images//header/header-logo-tab@2x.png 2x" media="(min-width: 768px)">
+              <source srcset="./images//header/header-logo-mob@1x.png 1x, ./images//header/header-logo-mob@2x.png 2x" media="(max-width: 767px)">
+              <img src="./images/header/header-logo.png" width="60" height="65" alt="logo">
+          </picture>
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+            <li class="header-nav__item">
+                <a class="header-nav__link link" href="">Home</a></li>
+            <li class="header-nav__item">
+                <a class="header-nav__link link" href="">How it’s made?</a></li>
+            <li class="header-nav__item">
+                <a class="header-nav__link link" href="">Our products</a></li>
+            <li class="header-nav__item">
+                <a class="header-nav__link link" href="">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="header__mobile-open js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="header__mobile-icon" width="32" height="32" aria-label="перемекач мобільного меню">
+              <use href="./images/vectors.svg#icon-mobil-menu"></use>
+          </svg>
+      </button>
+      <button class="header__button btn btn" type="button" data-modal-buy-now-open>
+          Buy now
+          <svg class="header__button-img" width="12" height="12">
+              <use href="./images/vectors.svg#icon-arrow-btn"></use>
+          </svg>
+      </button>
+      <div class="header__mobile-menu js-menu-container" id="mobile-menu">
+         <div class="header__mobile-wrapper">
+              <a href="./index.html">
+                  <picture>
+                      <source srcset="./images/header/header-logo-tab@1x.png 1x, ./images/header/header-logo-tab@2x.png 2x" media="(min-width: 768px)">
+                      <source srcset="./images/header/header-logo-mob@1x.png 1x, ./images/header/header-logo-mob@2x.png 2x" media="(max-width: 767px)">
+                      <img src="./images/header/header-logo-mob@1x.png" width="37" height="40" alt="logo">
+                  </picture>
+              </a>
+              <button class="header__mobile-close js-close-menu" type="button">
+                  <svg class="header__mobile-icon" width="32" height="32" aria-label="перемекач мобільного меню">
+                      <use href="./images/vectors.svg#icon-icon-menu-close"></use>
+                  </svg>
+              </button>
+          </div>
+          <nav class="header__nav-mobile">
+              <ul class="header__nav-mobile-list">
+                  <li class="header__nav-mobile-item">
+                      <a class="header__nav-mobile-link link" href="">Home</a></li>
+                  <li class="header__nav-mobile-item">
+                      <a class="header__nav-mobile-link mobile-link-current link" href="">How it’s made?</a></li>
+                  <li class="header__nav-mobile-item">
+                      <a class="header__nav-mobile-link link" href="">Our products</a></li>
+                  <li class="header__nav-mobile-item">
+                      <a class="header__nav-mobile-link link" href="#сontact">Contact</a></li>
+              </ul>
+          </nav>
+          <button class="header__button header__button--mobile btn" type="button"  data-modal-buy-now-mobile-open>
+              Buy now
+              <svg class="header__button-img" width="12" height="12">
+                  <use href="./images/vectors.svg#icon-arrow-btn"></use>
+              </svg>
+          </button>
+       </div>
+  </div>
+</header>
+<script defer src="./mobile-menu.js"></script>
+
