@@ -8,6 +8,10 @@ body {
   color: var(--col-text-primary);
 }
 
+a {  
+  cursor: url(../images/products/cursor.png), pointer;
+}
+
 .section {
   padding-bottom: 60px;
   background-color: var(--col-bg-dark);
