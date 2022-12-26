@@ -284,7 +284,7 @@
          font-style: normal;
          font-weight: 400;
          font-size: 12px;
-         line-height: 140%;
+         line-height: calc(17 / 12);
          color: var(--col-title-secondary);
          //  position: absolute;
          //  left: 188px;
@@ -347,7 +347,7 @@
      .hero_arrow {
          //  position: absolute;
          width: 40px;
-         margin-top: 10px;
+         margin-top: 12px;
          //  bottom: 23px;
          //  left: 187px;
          display: block;
@@ -398,6 +398,7 @@
          line-height: 17px;
      }
      .hero_numbers {
+         top: 27px;
          //  padding-top: 53px;
          //  margin-left: 130px;
      }
