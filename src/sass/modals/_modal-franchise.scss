@@ -18,9 +18,9 @@
     position: absolute;
     max-width: 280px;
     width: 100%;
-    // height: 674px;
-    max-height: 90vh;
-    overflow-y: scroll;
+    height: 674px;
+    // max-height: 90vh;
+    // overflow-y: scroll;
     z-index: 4;
     background-color: var(--col-bg-light);
     border-radius: 10px;
@@ -35,7 +35,7 @@
     @include tablet {
     max-width: 568px;
     width: 100%;
-    // height: 668px;
+    height: 668px;
     padding: 32px 60px;
     }
     
