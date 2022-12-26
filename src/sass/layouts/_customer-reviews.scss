@@ -1,6 +1,11 @@
 .customer-reviews-section {
     overflow-x: hidden;
 
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+
     .customer-reviews-swiper {
         background-color: var(--col-bg-dark);
         background-repeat: repeat-x;
@@ -21,6 +26,7 @@
             background-image: url(../images/customer-reviews/backgroud-desktop1x.jpg);
             background-position: top 98px center;
             padding-bottom: 100px;
+
 
         }
 
@@ -80,12 +86,19 @@
                 line-height: calc(31 / 12);
                 padding: 35px 39px;
 
+                margin-right: auto;
+                margin-left: auto;
+
+
                 @include mobile {}
 
                 @include tablet {
                     padding: 28px 80px;
                     font-weight: 500;
                     font-size: 14px;
+
+                    border-radius: 24px;
+
                     line-height: calc(26 / 14);
                     text-align: center;
                     letter-spacing: 0.04em;
@@ -96,6 +109,9 @@
                 @include desktop {
                     font-weight: 500;
                     font-size: 16px;
+
+                    border-radius: 24px;
+
                     line-height: calc(30 / 16);
                     padding: 43px 109px;
                     margin-bottom: 32px;
