@@ -20,7 +20,7 @@ textarea {
   overflow: hidden;
 }
 .backdrop-buy-now {
-  z-index: 100;
+  z-index: 999;
   position: fixed;
   top: 0;
   width: 100%;
@@ -53,7 +53,7 @@ textarea {
   transition: transform var(--animation-time) var(--cubic-function);
   @media screen and (max-width: 479px) {
     overflow: auto;
- }
+  }
   // overflow-y: scroll;
 
   @include tablet {
@@ -122,7 +122,27 @@ textarea {
   border: 0;
   clip: rect(0 0 0 0);
 }
-
+.checkbox-input.ice-cream.hide {
+  @media screen and (max-width: 479px) {
+    position: absolute;
+    top: 240px;
+    left: 130px;
+  }
+}
+.checkbox-input.ice-coffee.hide {
+  @media screen and (max-width: 479px) {
+    position: absolute;
+    top: 460px;
+    left: 130px;
+  }
+}
+.checkbox-input.milkshake.hide {
+  @media screen and (max-width: 479px) {
+    position: absolute;
+    top: 675px;
+    left: 130px;
+  }
+}
 .checkbox-label {
   width: 132px;
   position: relative;
@@ -245,7 +265,6 @@ textarea {
 
 .checkbox-input:focus + .checkbox-label .checkbox-wrap {
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
-
 }
 .checkbox-input:checked + .checkbox-label.ice-creams .checkbox-wrap {
   background-color: var(--col-bg-cream);
