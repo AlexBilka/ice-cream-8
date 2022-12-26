@@ -15,18 +15,39 @@
 }
 
 .close-location {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: #131313;
+  fill: currentColor;
+
+  transition-property: all;
+  transition-duration: var(--animation-time);
+  transition-timing-function: var(--cubic-function);
+
+  &:hover,
+  &:focus {
+    color: var(--col-default);
+    transform: scale(1.3);
+  }
+
+  @include tablet {
+    padding: 5px;
+  }
+}
+
+.close-icon-location {
   width: 20px;
   height: 20px;
-  fill: var(--col-text-primary);
-  transition: fill var(--animation-time) var(--cubic-function);
   @include tablet {
     width: 24px;
     height: 24px;
   }
-}
-.close-buy-now-button:hover .close-buy-now-icon,
-.close-buy-now-button:focus .close-buy-now-icon {
-  fill: var(--col-btn-default);
 }
 
 .modal-location {
@@ -37,43 +58,35 @@
   padding-left: 28px;
   padding-right: 28px;
   min-width: 280px;
-  max-height: 991px;
-  height: 100%;
+  border: 2px solid var(--col-border-form);
   background-color: var(--col-bg-light);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   transition: transform var(--animation-time) var(--cubic-function);
   @media screen and (max-width: 479px) {
     overflow-y: scroll;
   }
   @include tablet {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: 54px;
-    padding-right: 54px;
-    min-width: 568px;
-    max-height: 644px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 568px;
   }
 }
 
 .modal-title-location {
-  padding: 28px 54px 20px 54px;
   font-family: 'Seymour One';
-  width: 100%;
   text-align: center;
   margin-bottom: 20px;
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
   color: var(--col-text-primary);
-    @include tablet {
+  @include tablet {
     font-size: 20px;
     line-height: calc(28 / 20);
     margin-bottom: 40px;
@@ -84,20 +97,6 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  min-width: 142px;
-  height: 42px;
-  padding: 12px 34px;
-  background: var(--col-default);
-  border-radius: 10px;
-  border: none;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(15 / 12);
-  color: var(--col-text-primary);
-  transition: background-color var(--animation-time) var(--cubic-function);
-  transition: color var(--animation-time) var(--cubic-function);
-  transition: box-shadow var(--animation-time) var(--cubic-function);
   @include tablet {
     font-size: 14px;
     line-height: calc(17 / 14);
@@ -106,6 +105,8 @@
 
 .iframe-location {
   border-radius: 10px;
-  margin-left: 28px;
-  margin-right: 28px;
+  margin-bottom: 24px;
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
