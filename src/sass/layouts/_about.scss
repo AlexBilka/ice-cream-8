@@ -1,218 +1,216 @@
 .section.about {
-  padding-top: 61px;
-  padding-bottom: 50px;
+    padding-top: 61px;
+    padding-bottom: 50px;
 
-  @include tablet {
-    padding-bottom: 86px;
-  }
+    @include tablet {
+        padding-bottom: 86px;
+    }
 
-  @include desktop {
-    padding-bottom: 99px;
-  }
+    @include desktop {
+        padding-bottom: 99px;
+    }
 }
 
-.about__text-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: calc(22 / 18);
+.about__text-title {    
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: calc(22 / 18);       
+    
+        text-align: center;
+        text-transform: uppercase;
+        
+        margin-bottom: 12px;
+    
+        color: var(--col-title-secondary);
+    
+    @include tablet {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: calc(27 / 22);
+        
+        letter-spacing: 0.04em;
+        
+    }
 
-  text-align: center;
-  text-transform: uppercase;
-
-  margin-bottom: 12px;
-
-  color: var(--col-title-secondary);
-
-  @include tablet {
-    font-weight: 800;
-    font-size: 22px;
-    line-height: calc(27 / 22);
-
-    letter-spacing: 0.04em;
-  }
-
-  @include desktop {
-    font-size: 30px;
-    line-height: calc(37 / 30);
-  }
+    @include desktop {
+        font-size: 30px;
+        line-height: calc(37 / 30);
+    }
 }
 
 .about__title {
-  font-family: 'Seymour One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: calc(38 / 30);
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: calc(38 / 30);
+    
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    
+    margin-bottom: 32px;
+    
+    color: var(--col-title-secondary);
 
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+    @include tablet {        
+        font-size: 34px;
+        line-height: calc(43 / 34);
+        
+        letter-spacing: 0.06em;
 
-  margin-bottom: 32px;
+        margin-bottom: 72px;
+    }
 
-  color: var(--col-title-secondary);
-
-  @include tablet {
-    font-size: 34px;
-    line-height: calc(43 / 34);
-
-    letter-spacing: 0.06em;
-
-    margin-bottom: 72px;
-  }
-
-  @include desktop {
-    font-size: 36px;
-    line-height: calc(45 / 36);
-  }
+    @include desktop {
+        font-size: 36px;
+        line-height: calc(45 / 36);
+    }
 }
 
 .about__wrap {
-  display: flex;
-  align-items: center;
+    display: flex;   
+    align-items: center;
 
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-  }
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }        
 
-  @include tablet {
-    gap: 38px;
-  }
+    @include tablet {        
+        gap: 38px;
+    }
 
-  @include desktop {
-    gap: 109px;
-  }
+    @include desktop {
+        gap: 109px;        
+    }
 }
 
 .about__image-wraper {
-  position: relative;
-  width: 279px;
-  height: 278px;
-  background: linear-gradient(
-      0deg,
-      rgba(248, 210, 78, 0.7),
-      rgba(248, 210, 78, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
-  border-radius: 140px;
+    position: relative;
+    width: 279px;
+    height: 278px;
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+    border-radius: 140px;
 
-  @media screen and (max-width: 767px) {
-    margin-bottom: 62px;
-  }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 62px;
+    }
 
-  @include tablet {
-    width: 330px;
-    height: 330px;
-    box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
-    border-radius: 165px;
-  }
-
-  @include desktop {
-    width: 490px;
-    height: 490px;
-    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
-    border-radius: 250px;
-  }
+    @include tablet {
+        width: 330px;
+        height: 330px;
+        box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
+        border-radius: 165px;
+    }
+    
+    @include desktop {
+        width: 490px;
+        height: 490px;
+        box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+        border-radius: 250px;
+    }
 }
 
 .about__image {
-  position: absolute;
-  bottom: -22px;
+    position: absolute;
+    bottom: -22px;
 
-  @include tablet {
-    bottom: -26px;
-  }
+    @include tablet {
+        bottom: -26px;
+    }
 
-  @include desktop {
-    bottom: -39px;
-  }
+    @include desktop {
+        bottom: -39px;
+    }
 }
 
 .about__text-wraper {
-  width: 220px;
+    width: 220px;    
 
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+    
+    @media screen and (max-width: 1199px) {
+        margin: 0 auto;
+    } 
 
-  @media screen and (max-width: 1199px) {
-    margin: 0 auto;
-  }
+    @include tablet {
+        width: 336px;
+    }
 
-  @include tablet {
-    width: 336px;
-  }
-
-  @include desktop {
-    width: 540px;
-  }
+    @include desktop {
+        width: 540px;
+    }
 }
 
 .text {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(21 / 12);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(21 / 12);    
+    
+    color: var(--col-text-secondary);
 
-  color: var(--col-text-secondary);
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
+    @include tablet {        
+        line-height: calc(21 / 12);         
+        letter-spacing: 0.04em;
+        
+    }
 
-  @include tablet {
-    line-height: calc(21 / 12);
-    letter-spacing: 0.04em;
-  }
-
-  @include desktop {
-    font-size: 16px;
-    line-height: calc(28 / 16);
-  }
+    @include desktop {
+        font-size: 16px;
+        line-height: calc(28 / 16);
+    }
 }
 
 .about__text1 {
-  margin-bottom: 4px;
+    margin-bottom: 4px;
 
-  @include tablet {
-    margin-bottom: 8px;
-  }
+    @include tablet {
+        margin-bottom: 8px;
+    }
 }
 
 .about__text2 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 
-  @include tablet {
-    margin-bottom: 8px;
-  }
+    @include tablet {
+        margin-bottom: 8px;
+    }
 }
 
 .about__text3 {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 
-  @include tablet {
-    margin-bottom: 32px;
-  }
+    @include tablet {
+        margin-bottom: 32px;
+    }
 
-  @include desktop {
-    margin-bottom: 54px;
-  }
+    @include desktop {
+        margin-bottom: 54px;
+    }
+
 }
 
 .about__btn {
-  position: relative;
-  width: 164px;
-  height: 42px;
-  text-align: left;
+    position: relative;
+    width: 164px;
+    height: 42px;    
+    text-align: left;    
 }
 
 .icon-arrow-btn {
-  position: absolute;
-  right: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  fill: currentColor;
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: currentColor;
 }
