@@ -103,6 +103,8 @@
      border: 2px solid var(--col-btn-bg-default);
      border-radius: 8px;
      background-color: transparent;
+     color: var(--col-btn-disabled);
+     text-decoration: none;
      //  margin-bottom: 19px;
  }
  
@@ -115,6 +117,7 @@
  
  .hero_btn_second {
      background-color: transparent;
+     z-index: 4;
      border: none;
      font-family: 'Montserrat';
      font-style: normal;
@@ -125,6 +128,15 @@
      align-items: center;
      text-align: center;
      text-decoration-line: underline;
+     color: var(--col-default);
+     padding: 11px 26px;
+     transition: color var(--animation-time) var(--cubic-function);
+     &:focus,
+     &:hover {
+         color: var(--col-menu-default);
+         transform: scale(1.1);
+         box-shadow: 0 4px 10px rgba(153, 114, 23, 0.25);
+     }
      //  margin-bottom: 21px;
  }
  
@@ -344,7 +356,6 @@
      }
      .hero_img_plate {
          width: 225px;
-         //  z-index: 3;
          //  padding-top: 76px;
      }
      .hero_tittle {
