@@ -8,8 +8,12 @@ body {
   color: var(--col-text-primary);
 }
 
-a {  
+a {
   cursor: url(../images/products/cursor.png), pointer;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .section {
