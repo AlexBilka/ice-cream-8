@@ -103,6 +103,8 @@
      border: 2px solid var(--col-btn-bg-default);
      border-radius: 8px;
      background-color: transparent;
+     color: var(--col-btn-disabled);
+     text-decoration: none;
      //  margin-bottom: 19px;
  }
  
@@ -125,6 +127,7 @@
      align-items: center;
      text-align: center;
      text-decoration-line: underline;
+     color: var(--col-default);
      //  margin-bottom: 21px;
  }
  
@@ -344,7 +347,6 @@
      }
      .hero_img_plate {
          width: 225px;
-         //  z-index: 3;
          //  padding-top: 76px;
      }
      .hero_tittle {
