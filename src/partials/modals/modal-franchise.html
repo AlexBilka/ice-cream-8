@@ -34,5 +34,12 @@
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
+  
 })();  
+</script>
+
+<script>
+    modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.toggle('is-hidden');
+  });
 </script>
