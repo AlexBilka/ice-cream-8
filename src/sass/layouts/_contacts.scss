@@ -1,10 +1,30 @@
 .contacts {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 24%,
+    var(--col-bg-dark) 24%,
+    var(--col-bg-dark) 100%
+  );
+
   @include tablet {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 45%,
+      var(--col-bg-dark) 45%,
+      var(--col-bg-dark) 100%
+    );
     padding-bottom: 40px;
   }
 
   @include desktop {
-    padding-bottom: 132px;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 17%,
+      var(--col-bg-dark) 17%,
+      var(--col-bg-dark) 100%
+    );
+    padding-bottom: 120px;
   }
 }
 
@@ -220,4 +240,12 @@
     gap: 16px;
     justify-content: center;
   }
+}
+
+.contacts-btn {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 196px;
 }

@@ -1,10 +1,27 @@
+:root {
+  --col-bg-primary: #ffffff;
+  --col-bg-light: #fcfcfc;
+  --col-backdrop: rgba(0, 0, 0, 0.2);
+  --col-text-primary: #131313;
+  --col-bg-dark: #84a178;
+  --col-bg-cream: #aec6a5;
+  --col-bg-cofee: #efd478;
+  --col-bg-milkshakes: #d6936d;
+  --col-btn-default: #000000;
+  --col-default: #f8d24e;
+  --col-accent: #0a8817;
+  --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-time: 250ms;
+}
+
 .backdrop-buy-now {
+  z-index: 100;
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 300ms linear;
+  background-color: var(--col-backdrop);
+  transition: opacity var(--animation-time) var(--cubic-function);
 }
 .is-hidden {
   opacity: 0;
@@ -19,27 +36,31 @@
   padding-right: 28px;
   min-width: 280px;
   max-height: 991px;
-  background-color: #fcfcfc;
+  height: 100%;
+  background-color: var(--col-bg-light);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%) scaleY(1) scaleX(1);
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: auto;
+  transform: translateX(-50%);
+  transition: transform var(--animation-time) var(--cubic-function);
+  overflow-y: scroll;
+
   @include tablet {
-   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 54px;
     padding-right: 54px;
     min-width: 568px;
-    min-height: 644px;
+    max-height: 644px;
   }
 }
 .backdrop.is-hidden .modal-buy-now {
-  transform: translate(-50%, -50%) scaleY(-0.5) scaleX(0);
+  transform: translate(-50%, -50%);
 }
 .modal-buy-now-title {
   font-family: 'Seymour One';
@@ -49,7 +70,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
-  color: #131313;
+  color: var(--col-text-primary);
   @include tablet {
     font-size: 20px;
     line-height: calc(28 / 20);
@@ -64,8 +85,6 @@
   @include tablet {
     max-width: 368px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 .buy-now-list {
@@ -84,77 +103,6 @@
   }
 }
 
-.modal-buy-now-input {
-  display: block;
-  margin-bottom: 12px;
-  width: 100%;
-  height: 32px;
-  padding: 8px 12px;
-  background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @include tablet {
-    height: 42px;
-  padding: 11px 16px;
-  margin-bottom: 16px;
-  }
-
-}
-.modal-buy-now-input.comment {
-  height: 65px;
-  margin-bottom: 26px;
-  @include tablet {
-    height: 84px;
-  margin-bottom: 32px;
-  }
-}
-.modal-buy-now-input::placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: calc(20 / 14);
-}
-.modal-buy-now-input:hover,
-.modal-buy-now-input:focus {
-  border-color: #84a178;
-  outline: #0a8817;
-}
-
-.modal-buy-now-input:not(:focus):not(:placeholder-shown):valid {
-  background-color: rgba(248, 210, 78, 0.1);
-}
-.modal-buy-now-input:not(:focus):not(:placeholder-shown):invalid {
-  background-color: rgba(288, 0, 0, 0.2);
-  border-color: #f44336;
-}
-textarea {
-  resize: none;
-}
-
-.close-buy-now-button {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  @include tablet {
-    width: 24px;
-    height: 24px;
-  }
-  transition: box-shadow 250ms linear;
-}
-.close-buy-now-button:hover,
-.close-buy-now-button:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
 .hide {
   position: absolute;
   width: 1px;
@@ -165,7 +113,6 @@ textarea {
   border: 0;
   clip: rect(0 0 0 0);
 }
-
 
 .checkbox-label {
   width: 132px;
@@ -179,30 +126,36 @@ textarea {
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 135px;
+  height: 132px;
   padding-bottom: 20px;
-  border: 2px solid white;
+  border: 2px solid var(--col-bg-primary);
   border-top: none;
   border-radius: 15px;
-  background-color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--col-bg-primary);
+  transition: background-color var(--animation-time) var(--cubic-function);
+  transition: box-shadow var(--animation-time) var(--cubic-function);
 }
-.checkbox-label.ice-cream .checkbox-wrap {
-  border-color: rgba(150, 175, 140, 1);
+.checkbox-label .checkbox-wrap:hover {
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.checkbox-label.ice-creams .checkbox-wrap {
+  border-color: var(--col-bg-cream);
 }
 .checkbox-label.ice-coffee .checkbox-wrap {
-  border-color: #efd478;
+  border-color: var(--col-bg-cofee);
 }
 .checkbox-label.milkshake .checkbox-wrap {
-  border-color: #d6936d;
+  border-color: var(--col-bg-milkshakes);
 }
+
 .checkbox-wrap {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(20 / 16);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #131313;
+  color: var(--col-text-primary);
 }
 .checkbox-label::before {
   content: '';
@@ -212,25 +165,25 @@ textarea {
   border-radius: 50%;
   position: absolute;
   top: 7px;
-  left: 1;
+  left: 0;
   transform: translateY(-50%);
 }
-.checkbox-label.ice-cream::before {
+.checkbox-label.ice-creams::before {
   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-  background-color: #aec6a5;
+  background-color: var(--col-bg-cream);
 }
 .checkbox-label.ice-coffee::before {
   box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
-  background-color: #efd478;
+  background-color: var(--col-bg-cofee);
 }
 .checkbox-label.milkshake::before {
   box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
-  background-color: #d6936d;
+  background-color: var(--col-bg-milkshakes);
 }
 .checkbox-label::after {
   position: absolute;
   top: 0;
-  left: 1;
+  left: 0;
   transform: translateY(-50%);
   content: '';
   display: block;
@@ -241,7 +194,7 @@ textarea {
   background-position: center;
   background-size: contain;
 }
-.checkbox-label.ice-cream::after {
+.checkbox-label.ice-creams::after {
   background-image: url(../images/modal-buy-now/ice-cream-mobile.jpeg);
   @include retina {
     background-image: url(../images/modal-buy-now/ice-cream-mobile-2x.jpeg);
@@ -280,16 +233,68 @@ textarea {
     }
   }
 }
-.checkbox-input:checked + .checkbox-label.ice-cream .checkbox-wrap {
+
+.checkbox-input:focus + .checkbox-label .checkbox-wrap {
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+.checkbox-input:checked + .checkbox-label.ice-creams .checkbox-wrap {
   background-color: var(--col-bg-cream);
 }
 
 .checkbox-input:checked + .checkbox-label.ice-coffee .checkbox-wrap {
-  background-color: #efd478;
+  background-color: var(--col-bg-cofee);
 }
 
 .checkbox-input:checked + .checkbox-label.milkshake .checkbox-wrap {
-  background-color: #d6936d;
+  background-color: var(--col-bg-milkshakes);
+}
+
+.modal-buy-now-input {
+  display: block;
+  margin-bottom: 12px;
+  width: 100%;
+  height: 32px;
+  padding: 8px 12px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid var(--col-bg-dark);
+  border-radius: 10px;
+  cursor: pointer;
+  // transition: border-color var(--animation-time) var(--cubic-function);
+  transition: box-shadow var(--animation-time) var(--cubic-function);
+  @include tablet {
+    height: 42px;
+    padding: 11px 16px;
+    margin-bottom: 16px;
+  }
+}
+.modal-buy-now-input.comment {
+  height: 65px;
+  margin-bottom: 26px;
+  @include tablet {
+    height: 84px;
+    margin-bottom: 32px;
+  }
+}
+.modal-buy-now-input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(20 / 14);
+}
+.modal-buy-now-input:hover,
+.modal-buy-now-input:focus {
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.modal-buy-now-input:not(:focus):not(:placeholder-shown):valid {
+  background-color: rgba(248, 210, 78, 0.1);
+}
+.modal-buy-now-input:not(:focus):not(:placeholder-shown):invalid {
+  background-color: rgba(288, 0, 0, 0.2);
+  border-color: #f44336;
+}
+textarea {
+  resize: none;
 }
 
 .modal-buy-now-button {
@@ -299,28 +304,68 @@ textarea {
   min-width: 142px;
   height: 42px;
   padding: 12px 34px;
-  background: #f8d24e;
+  background: var(--col-default);
   border-radius: 10px;
   border: none;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
-  color: (#131313);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms linear;
-  transition: color 250ms linear;
+  color: var(--col-text-primary);
+  transition: background-color var(--animation-time) var(--cubic-function);
+  transition: color var(--animation-time) var(--cubic-function);
+  transition: box-shadow var(--animation-time) var(--cubic-function);
   @include tablet {
-   font-size: 14px;
-  line-height: calc(17 / 14);
+    font-size: 14px;
+    line-height: calc(17 / 14);
   }
 }
 
 .modal-buy-now-button:hover {
-  background: #0a8817;
-  color: #000000;
+  background: var(--col-accent);
+  color: var(--col-btn-default);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .modal-buy-now-button:focus {
-  background: #0a8817;
-  color: #ffffff;
+  background: var(--col-accent);
+  color: var(--col-bg-primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.close-buy-now-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  transition: box-shadow var(--animation-time) var(--cubic-function);
+  @include tablet {
+    padding: 4px;
+  }
+}
+.close-buy-now-button:hover,
+.close-buy-now-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.close-buy-now-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--col-text-primary);
+  transition: fill var(--animation-time) var(--cubic-function);
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+.close-buy-now-button:hover .close-buy-now-icon,
+.close-buy-now-button:focus .close-buy-now-icon {
+  fill: var(--col-btn-default);
+}
+.no-scroll {
+  overflow: hidden;
 }
