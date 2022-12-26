@@ -15,7 +15,7 @@
 }
 
 .backdrop-buy-now {
-  z-index: 6;
+  z-index: 100;
   position: fixed;
   top: 0;
   width: 100%;
@@ -29,7 +29,6 @@
   pointer-events: none;
 }
 .modal-buy-now {
-  z-index: 5;
   position: relative;
   padding-top: 28px;
   padding-bottom: 29px;
@@ -44,11 +43,10 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   transition: transform var(--animation-time) var(--cubic-function);
-  @media screen and (max-width: 479px) {
-    overflow-y: scroll;
-  }
+  overflow-y: scroll;
+
   @include tablet {
     top: 50%;
     left: 50%;
@@ -61,11 +59,6 @@
     max-height: 644px;
   }
 }
-// .modal-buy-now-container {
-//   height: 100%;
-//   width: 100%;
-//   overflow: auto;
-// }
 .backdrop.is-hidden .modal-buy-now {
   transform: translate(-50%, -50%);
 }
@@ -243,6 +236,7 @@
 
 .checkbox-input:focus + .checkbox-label .checkbox-wrap {
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 .checkbox-input:checked + .checkbox-label.ice-creams .checkbox-wrap {
   background-color: var(--col-bg-cream);
@@ -289,7 +283,6 @@
 }
 .modal-buy-now-input:hover,
 .modal-buy-now-input:focus {
-  // border-color: var(--col-accent);
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -346,14 +339,13 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  // padding: 0;
-  padding: 3px;
+  padding: 2px;
   border-radius: 50%;
   border: none;
   background-color: transparent;
   transition: box-shadow var(--animation-time) var(--cubic-function);
   @include tablet {
-    padding: 5px;
+    padding: 4px;
   }
 }
 .close-buy-now-button:hover,
@@ -373,4 +365,7 @@ textarea {
 .close-buy-now-button:hover .close-buy-now-icon,
 .close-buy-now-button:focus .close-buy-now-icon {
   fill: var(--col-btn-default);
+}
+.no-scroll {
+  overflow: hidden;
 }
