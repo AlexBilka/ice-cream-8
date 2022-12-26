@@ -6,7 +6,7 @@
     padding-bottom: 12px;
   }
   &::after {
-    @media screen and(max-width:1199px) {
+    @media screen and (max-width:1199px) {
       content: '';
       position: absolute;
       width: 100%;
