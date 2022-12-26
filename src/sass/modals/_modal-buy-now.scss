@@ -13,7 +13,12 @@
   --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-time: 250ms;
 }
-
+textarea {
+  resize: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
 .backdrop-buy-now {
   z-index: 100;
   position: fixed;
@@ -45,7 +50,10 @@
   left: 50%;
   transform: translateX(-50%);
   transition: transform var(--animation-time) var(--cubic-function);
-  overflow-y: scroll;
+  @media screen and (max-width: 479px) {
+    overflow: auto;
+ }
+  // overflow-y: scroll;
 
   @include tablet {
     top: 50%;
@@ -292,9 +300,6 @@
 .modal-buy-now-input:not(:focus):not(:placeholder-shown):invalid {
   background-color: rgba(288, 0, 0, 0.2);
   border-color: #f44336;
-}
-textarea {
-  resize: none;
 }
 
 .modal-buy-now-button {
