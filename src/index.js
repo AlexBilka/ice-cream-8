@@ -16,9 +16,20 @@ document.addEventListener(
 (function (document, history, location) {
   var HISTORY_SUPPORT = !!(history && history.pushState);
 
+  function padding(w) {
+  
+    if (window.innerWidth < 768) {
+      w = 40;
+    } else {
+      w = 65;
+    }
+    return w;
+  }
+  let paddingTop = padding();
+
   var anchorScrolls = {
     ANCHOR_REGEX: /^#[^ ]+$/,
-    OFFSET_HEIGHT_PX: 65,
+    OFFSET_HEIGHT_PX: paddingTop,
 
     init: function () {
       this.scrollToCurrent();
