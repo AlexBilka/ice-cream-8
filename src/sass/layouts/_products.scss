@@ -47,18 +47,26 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
   }
   &__uppertext {
     font-weight: 800;
-    @include adaptiv-font(30, 22);
-    line-height: calc(22 / 18);
+    font-size: 18px;
+    line-height: 1.27;
     text-align: center;
     text-transform: uppercase;
     color: var(--col-text-primary);
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include desktop {
+      font-size: 30px;
+    }
   }
 
   &__title {
     font-family: 'Seymour One', sans-serif;
     font-weight: 400;
-    @include adaptiv-font(36, 30);
-    line-height: calc(38 / 30);
+    font-size: 30px;
+    line-height: 1.27;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -66,10 +74,12 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
     margin-bottom: 150px;
 
     @include tablet {
+      font-size: 34px;
       margin-bottom: 200px;
     }
 
     @include desktop {
+      font-size: 36px;
       margin-bottom: 300px;
     }
   }
@@ -111,9 +121,17 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
     color: var(--col-text-primary);
     margin-right: auto;
     margin-left: auto;
-    @include adaptiv-font(16, 14);
-    line-height: calc(25 / 14);
+    font-size: 14px;
+    line-height: 1.78;
     letter-spacing: 0.04em;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__btn {
@@ -419,6 +437,6 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
   }
 
   @include desktop {
-    @include adaptiv-font(30, 22);
+    font-size: 30px;
   }
 }

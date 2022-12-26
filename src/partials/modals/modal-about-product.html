@@ -113,7 +113,7 @@
         placeholder="Comment"
         aria-label="usercomment"
       ></textarea>
-      <button class="modal-products__btn" type="submit" products-modal-btn>
+      <button class="modal-products__btn btn" type="submit" products-modal-btn>
         Submit
       </button>
     </form>
@@ -139,11 +139,15 @@
 
 <!-- -------------------------------SCRIPT FOR CLOSE/OPEN MODAL WINDOW-------------------------------------- -->
 <script>
-  const openModalBtn = document.querySelector('[products-modal-open]');
+  const openModalBtn1 = document.querySelector('[products-modal-open-1]');
+  const openModalBtn2 = document.querySelector('[products-modal-open-2]');
+  const openModalBtn3 = document.querySelector('[products-modal-open-3]');
   const closeModalBtn = document.querySelector('[products-modal-close]');
   const modal = document.querySelector('[products-modal]');
 
-  openModalBtn.addEventListener('click', toggleModal);
+  openModalBtn1.addEventListener('click', toggleModal);
+  openModalBtn2.addEventListener('click', toggleModal);
+  openModalBtn3.addEventListener('click', toggleModal);
   closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
@@ -154,17 +158,3 @@
     if (e.target === modal) modal.classList.toggle('is-hidden');
   });
 </script>
-
-<!-- -----------------------------------------------------------------------------------------------------------
-1. Відкриття/закриття модального вікна та бекдропу працює по кліку на відповідних кнопках
-2. Добавив курсор авторський при ховері на кнопки в модальному вікні
-3. Добавив анімацію scale при відкритті/закритті модального вікна
-4. Добавив анімацію scale при ховері/фокусі на кнопку закриття модального вікна
-5. Пофіксив щоб анімація починалась з моменту відкриття  модального вікна
-6. Переписані всі стилі на scss з амперсантами
-7. Всі js скрипти прописані в середині html паршалу
-8. Переписані всі можливі медіа правила через міксини
-9. Переписані основні кольори та функції анімації через сss змінні
-
-10. Добавав в js код для модального вікна, який закриває його при будь якому кліку не в тіло модального вікна
------------------------------------------------------------------------------------------------------------  -->
