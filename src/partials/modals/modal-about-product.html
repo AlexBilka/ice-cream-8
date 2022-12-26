@@ -113,7 +113,7 @@
         placeholder="Comment"
         aria-label="usercomment"
       ></textarea>
-      <button class="modal-products__btn" type="submit" products-modal-btn>
+      <button class="modal-products__btn btn" type="submit" products-modal-btn>
         Submit
       </button>
     </form>
@@ -139,11 +139,15 @@
 
 <!-- -------------------------------SCRIPT FOR CLOSE/OPEN MODAL WINDOW-------------------------------------- -->
 <script>
-  const openModalBtn = document.querySelector('[products-modal-open]');
+  const openModalBtn1 = document.querySelector('[products-modal-open-1]');
+  const openModalBtn2 = document.querySelector('[products-modal-open-2]');
+  const openModalBtn3 = document.querySelector('[products-modal-open-3]');
   const closeModalBtn = document.querySelector('[products-modal-close]');
   const modal = document.querySelector('[products-modal]');
 
-  openModalBtn.addEventListener('click', toggleModal);
+  openModalBtn1.addEventListener('click', toggleModal);
+  openModalBtn2.addEventListener('click', toggleModal);
+  openModalBtn3.addEventListener('click', toggleModal);
   closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
