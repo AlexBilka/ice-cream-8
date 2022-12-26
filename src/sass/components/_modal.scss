@@ -1,156 +1,157 @@
 .backdrop {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--col-backdrop);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--col-backdrop);
+    z-index: 9999;
 }
+
 .modal {
-  width: calc(100% - 30px);
-  min-height: 580px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 40px;
-
-  @include mobile {
-    max-width: 450px;
-  }
-  @include desktop {
-    max-width: 530px;
-  }
-  background: var(--col-bg-light);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    width: calc(100% - 30px);
+    min-height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    @include mobile {
+        max-width: 450px;
+    }
+    @include desktop {
+        max-width: 530px;
+    }
+    background: var(--col-bg-light);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-
-  transform: translate(-50%, -50%) scale(1);
-
-  .backdrop.is-hidden {
-    transform: translate(-50%, -50%) scale(0.5);
-  }
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    .backdrop.is-hidden {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
 }
 
 .modal-close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  outline: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    outline: transparent;
 }
 
 .is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
-.modal-title {
-  font-weight: 700;
-  font-size: 20px;
-  text-align: center;
 
-  color: title-color;
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: title-color;
 }
+
 .modal-form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .modal-field {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
+
 .input-wrapper {
-  position: relative;
+    position: relative;
 }
+
 .modal-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 .input-label {
-  font-size: 12px;
-  letter-spacing: 0.01em;
+    font-size: 12px;
+    letter-spacing: 0.01em;
 }
 
 .modal-input {
-  width: 100%;
-  height: 40px;
-  padding-left: 42px;
-
-  border: 1px solid;
-  border-radius: 4px;
-  background-color: transparent;
-  outline: transparent;
-  transition: border-color;
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color;
 }
 
 .modal-coment {
-  width: 100%;
-  height: 120px;
-  padding-left: 15px;
-  padding-top: 12px;
-  margin-bottom: 5px;
-
-  border: 1px solid var(--col-backdrop);
-  border-radius: 4px;
-  background-color: transparent;
-  outline: transparent;
-  resize: none;
+    width: 100%;
+    height: 120px;
+    padding-left: 15px;
+    padding-top: 12px;
+    margin-bottom: 5px;
+    border: 1px solid var(--col-backdrop);
+    border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
+    resize: none;
 }
 
 .check-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-
-  font-size: 12px;
-  @include desktop {
-    font-size: 14px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 12px;
+    @include desktop {
+        font-size: 14px;
+    }
 }
 
 .check-wrap {
-  display: flex;
+    display: flex;
 }
 
 .check-text span {
-  width: 16px;
-  height: 15px;
-  border-radius: 2px;
-  margin-right: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
 }
+
 .modal-check {
-  &:checked + .check-text span {
-    border: none;
-  }
-  &:hover + .check-text span {
-    cursor: pointer;
-  }
-  &:focus + .check-text span {
-    border-color: var(--col-backdrop);
-  }
+    &:checked+.check-text span {
+        border: none;
+    }
+    &:hover+.check-text span {
+        cursor: pointer;
+    }
+    &:focus+.check-text span {
+        border-color: var(--col-backdrop);
+    }
 }
 
 .modal-field {
-  position: relative;
+    position: relative;
 }
 
 .agreement-link {
-  padding-left: 0.5em;
-  cursor: pointer;
-  text-decoration: underline;
+    padding-left: 0.5em;
+    cursor: pointer;
+    text-decoration: underline;
 }
