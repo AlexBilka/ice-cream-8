@@ -24,6 +24,7 @@
   &:focus {
     color: var(--col-btn-focus);
     background-color: var(--col-btn-bg-focus);
+    fill: var(--col-btn-focus);
   }
 
   &--transparent {
@@ -44,10 +45,13 @@
     &:hover {
       color: var(--col-btn-hover);
       border: 2px solid #0a8817;
+      background-color: transparent;
     }
 
     &:focus {
       color: var(--col-btn-focus);
+      background-color: transparent;
+      fill: var(--col-btn-focus);
     }
   }
 }

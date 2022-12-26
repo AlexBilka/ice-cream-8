@@ -1,88 +1,160 @@
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <button type="button" class="modal-close" data-modal-close>
-      <svg class="modal-close-icon" width="11" height="11">
-        <use href="./images/icons.svg#icon-close"></use>
+<!-- --------------------------------------MAX FARMAHA WORKS IN THIS FIELD---------------------------------------------- -->
+
+<div class="modal-products__backdrop is-hidden" products-modal>
+  <div class="modal-products">
+    <button
+      class="modal-products__close-btn"
+      type="button"
+      products-modal-close
+    >
+      <svg class="modal__check" width="24" height="24">
+        <use href="./images/vectors.svg#icon-icon-menu-close"></use>
       </svg>
     </button>
-    <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-    <form class="modal-form">
-      <div class="modal-field">
-        <label for="user-name" class="input-label">Ім'я</label>
-        <div class="input-wrapper">
-          <input
-            class="modal-input"
-            type="text"
-            name="user-name"
-            required
-            minlength="3"
-            id="user-name"
-          />
-          <svg class="modal-icon" width="18" height="18">
-            <use href="./images/icons.svg#icon-person"></use>
-          </svg>
+
+    <p class="modal-products__title">Chocolate icecream</p>
+
+    <picture class="modal-products__pic">
+      <source
+        srcset="
+          ./images/modal-about-product/chokolate-icecream-1x.jpg 1x,
+          ./images/modal-about-product/chokolate-icecream-2x.jpg 2x
+        "
+      />
+      <img
+        class="modal-products__img"
+        src="./images/modal-about-product/chokolate-icecream-1x.jpg"
+        alt="Chocolate icecream"
+        width="132"
+      />
+    </picture>
+
+    <ul class="nutrients">
+      <li class="nutrients__item">
+        <div class="nutrients__wrap nutrients__wrap--first">
+          <p class="nutrients__value">320</p>
         </div>
-      </div>
-      <div class="modal-field">
-        <label for="user-phone" class="input-label">Телефон</label>
-        <div class="input-wrapper">
-          <input
-            class="modal-input"
-            type="tel"
-            name="user-phone"
-            required
-            id="user-phone"
-          />
-          <svg class="modal-icon" width="18" height="18">
-            <use href="./images/icons.svg#icon-phone"></use>
-          </svg>
+        <p class="nutrients__text nutrients__text--first">kcal</p>
+      </li>
+      <li class="nutrients__item">
+        <div class="nutrients__wrap nutrients__wrap--second">
+          <p class="nutrients__value">4g</p>
         </div>
-      </div>
-      <div class="modal-field">
-        <label for="user-email" class="input-label">Пошта</label>
-        <div class="input-wrapper">
-          <input
-            class="modal-input"
-            type="email"
-            name="user-email"
-            id="user-email"
-          />
-          <svg class="modal-icon" width="18" height="18">
-            <use href="./images/icons.svg#icon-email"></use>
-          </svg>
+        <p class="nutrients__text nutrients__text--second">Prote...</p>
+      </li>
+      <li class="nutrients__item">
+        <div class="nutrients__wrap nutrients__wrap--third">
+          <p class="nutrients__value">8,2g</p>
         </div>
-      </div>
-      <div class="modal-field">
-        <label for="user-coment" class="input-label">Коментар</label>
-        <textarea
-          class="modal-coment"
-          name="user-coment"
-          id="user-coment"
-          placeholder="Введіть текст"
-        ></textarea>
-      </div>
-      <div class="modal-field">
-        <input
-          class="modal-check hide"
-          type="checkbox"
-          name="agreement"
-          required
-          id="agreement"
-        />
-        <label for="agreement" class="check-text">
-          <div class="check-wrap">
-            <span>
-              <svg class="check-icon" width="11" height="8">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-            </span>
-            Погоджуюся з розсилкою та приймаю
-          </div>
-          <a class="agreement-link" href="#">Умови договору</a>
-        </label>
-      </div>
-      <button type="submit" class="modal__btn btn">Відправити</button>
+        <p class="nutrients__text nutrients__text--third">Fats</p>
+      </li>
+      <li class="nutrients__item">
+        <div class="nutrients__wrap nutrients__wrap--fourth">
+          <p class="nutrients__value">40,4g</p>
+        </div>
+        <p class="nutrients__text nutrients__text--fourth">Carbs</p>
+      </li>
+    </ul>
+
+    <p class="modal-products__subtitle">Ingredients</p>
+    <ul class="modal-products__list">
+      <li class="modal-products__item">
+        <p class="modal-products__text">Milk</p>
+        <p class="modal-products__value">100ml</p>
+      </li>
+      <li class="modal-products__item">
+        <p class="modal-products__text">Belgian chocolate</p>
+        <p class="modal-products__value">20g</p>
+      </li>
+      <li class="modal-products__item">
+        <p class="modal-products__text">Cream</p>
+        <p class="modal-products__value">150ml</p>
+      </li>
+      <li class="modal-products__item">
+        <p class="modal-products__text">Cocoa powder</p>
+        <p class="modal-products__value">30g</p>
+      </li>
+      <li class="modal-products__item">
+        <p class="modal-products__text">Sugar</p>
+        <p class="modal-products__value">40g</p>
+      </li>
+      <li class="modal-products__item">
+        <p class="modal-products__text">Vanilla sugar</p>
+        <p class="modal-products__value">10g</p>
+      </li>
+    </ul>
+
+    <form class="modal-products__form" name="modal-products-form">
+      <input
+        class="modal-products__input"
+        type="text"
+        name="username"
+        placeholder="Name"
+        aria-label="username"
+        pattern="[A-Za-z]{6,}"
+        title="The name cannot be shorter than 6 characters and must contain only Latin characters"
+        required
+        products-modal-username
+      />
+      <input
+        class="modal-products__input"
+        type="tel"
+        name="userphone"
+        placeholder="Phone"
+        aria-label="userphone"
+        pattern="[0-9]{10,}"
+        title="The number cannot be shorter than 10 characters and must contain only numbers"
+        required
+        products-modal-tel
+      />
+      <textarea
+        class="modal-products__textarea"
+        name="usercomment"
+        placeholder="Comment"
+        aria-label="usercomment"
+      ></textarea>
+      <button class="modal-products__btn btn" type="submit" products-modal-btn>
+        Submit
+      </button>
     </form>
   </div>
 </div>
-<script src="./modal.js"></script>
+<!-- --------------------------------------MAX FARMAHA WORKS IN THIS FIELD---------------------------------------------- -->
+
+<!-- -------------------------------SCRIPT FOR ENABLED/DISABLED MODAL BUTTON-------------------------------------- -->
+<script>
+  const userName = document.querySelector('[products-modal-username]');
+  const userPhone = document.querySelector('[products-modal-tel]');
+  const button = document.querySelector('[products-modal-btn]');
+  button.disabled = true;
+
+  addEventListener('keyup', () => {
+    if (userName.value.length > 0 && userPhone.value.length > 0) {
+      button.disabled = false;
+    } else {
+      button.disabled = true;
+    }
+  });
+</script>
+
+<!-- -------------------------------SCRIPT FOR CLOSE/OPEN MODAL WINDOW-------------------------------------- -->
+<script>
+  const openModalBtn1 = document.querySelector('[products-modal-open-1]');
+  const openModalBtn2 = document.querySelector('[products-modal-open-2]');
+  const openModalBtn3 = document.querySelector('[products-modal-open-3]');
+  const closeModalBtn = document.querySelector('[products-modal-close]');
+  const modal = document.querySelector('[products-modal]');
+
+  openModalBtn1.addEventListener('click', toggleModal);
+  openModalBtn2.addEventListener('click', toggleModal);
+  openModalBtn3.addEventListener('click', toggleModal);
+  closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    modal.classList.toggle('is-hidden');
+  }
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.toggle('is-hidden');
+  });
+</script>
