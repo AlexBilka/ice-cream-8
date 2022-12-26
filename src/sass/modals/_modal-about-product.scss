@@ -23,7 +23,7 @@
     height: 0;
   }
 
-  width: calc(100% - 40px);
+  width: calc(100vw - 40px);
   min-width: 280px;
   background-color: var(--col-bg-light);
   border: 2px solid var(--col-default);
@@ -336,7 +336,7 @@
 
 @media screen and (min-width: 520px) {
   .modal-products {
-    width: 440px;
+    width: 480px;
   }
 }
 
