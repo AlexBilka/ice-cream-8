@@ -27,6 +27,11 @@
     fill: var(--col-btn-focus);
   }
 
+  &:disabled {
+    background-color: var(--col-btn-bg-disabled);
+    cursor: inherit;
+  }
+
   &--transparent {
     font-family: inherit;
     padding: 12px 34px;
