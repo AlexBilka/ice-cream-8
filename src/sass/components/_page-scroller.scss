@@ -30,7 +30,7 @@
     border-radius: 50%;
     cursor: pointer;
     animation: slide-top 750ms linear, scaler 1500ms infinite alternate both;
-    z-index: 999;
+    z-index: 10;
   }
   .arrow-top {
     fill: #fff;
