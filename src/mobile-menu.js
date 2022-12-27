@@ -20,7 +20,7 @@
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
-    mobileButton.classList.remove('is-open');
-    noScroll.classList.remove('is-open');
+    openMenuBtn.setAttribute('aria-expanded', false);
+    noScroll.classList.toggle('no-scroll');
   });
 })();
