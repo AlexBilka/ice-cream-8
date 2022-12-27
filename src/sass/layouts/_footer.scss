@@ -109,7 +109,7 @@
   }
   &__icons {
     fill: var(--col-icon-bg-dark);
-    transition: fiil var(--animation-time) var(--cubic-function);
+    transition: fill var(--animation-time) var(--cubic-function);
     .footer__soc-link:hover &,
     .footer__soc-link:focus & {
       fill: var(--col-btn-focus);
