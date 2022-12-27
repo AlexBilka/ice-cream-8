@@ -2,6 +2,7 @@
 
 body {
   background-image: url(../images/products/products-bg-mob@1x.jpg);
+  background-repeat: repeat;
 
   @include retina {
     background-image: url(../images/products/products-bg-mob@2x.jpg);
