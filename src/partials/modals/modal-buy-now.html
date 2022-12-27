@@ -1,18 +1,18 @@
 <div class="backdrop-buy-now  is-hidden" modal-buy-now>
     <div class="modal-buy-now">
         <p class="modal-buy-now-title">Buy now</p>
-        <form class="modal-buy-now-form" autocomplete="off" >
+        <form class="modal-buy-now-form" autocomplete="off">
             <ul class="buy-now-list">
-                <li><input class="checkbox-input ice-cream hide" name="buy-it" type="checkbox" id="check-ice-cream"
+                <li><input buy-now-modal-check-1 class="checkbox-input ice-cream hide" name="buy-it" type="checkbox" id="check-ice-cream"
                         value="ice-cream">
                     <label class="checkbox-label ice-creams" for="check-ice-cream"><span class="checkbox-wrap">ice
                             cream</span></label>
                 </li>
-                <li><input class="checkbox-input ice-coffee hide" name="buy-it" type="checkbox" id="check-ice-coffee">
+                <li><input buy-now-modal-check-2 class="checkbox-input ice-coffee hide" name="buy-it" type="checkbox" id="check-ice-coffee">
                     <label class="checkbox-label ice-coffee" for="check-ice-coffee"><span class="checkbox-wrap">ice
                             coffee</span></label>
                 </li>
-                <li><input class="checkbox-input milkshake hide" name="buy-it" type="checkbox" id="check-milkshake">
+                <li><input buy-now-modal-check-3 class="checkbox-input milkshake hide" name="buy-it" type="checkbox" id="check-milkshake">
                     <label class="checkbox-label milkshake" for="check-milkshake"><span
                             class="checkbox-wrap">milkshake</span></label>
                 </li>
@@ -28,7 +28,7 @@
             <textarea name="comment" class="modal-buy-now-input comment" placeholder="Comment"></textarea>
 
 
-            <button class="modal-buy-now-button" type="submit">Submit</button>
+            <button class="modal-buy-now-button " buy-now-modal-btn type="submit">Submit</button>
 
         </form>
         <button class="close-buy-now-button" type="button" modal-buy-now-close> <svg class="close-buy-now-icon">
@@ -58,3 +58,20 @@
     })();
 </script>
 
+<!-- SCRIPT FOR ENABLED||DISABLED BUTTON -->
+
+<script> 
+    const buttonBN = document.querySelector('[buy-now-modal-btn]'); 
+    const checkboxBN1 = document.querySelector('[buy-now-modal-check-1]'); 
+    const checkboxBN2 = document.querySelector('[buy-now-modal-check-2]'); 
+    const checkboxBN3 = document.querySelector('[buy-now-modal-check-3]'); 
+    buttonBN.disabled = true; 
+   
+    addEventListener('click', () => { 
+      if (checkboxBN1.checked || checkboxBN2.checked || checkboxBN3.checked) { 
+        buttonBN.disabled = false; 
+      } else { 
+        buttonBN.disabled = true; 
+      } 
+    }); 
+  </script>
