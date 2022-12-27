@@ -1,5 +1,6 @@
 .customer-reviews-section {
     overflow-x: hidden;
+    padding-bottom: 0px;
 
 
     .customer-reviews-swiper {
@@ -42,14 +43,14 @@
             }
 
             .customer-reviews-banner {
-                margin-bottom: 0px auto 80px auto;
+                margin: 0px auto 80px auto;
                 border-radius: 13px;
 
 
                 @include mobile {}
 
                 @include tablet {
-                    margin-bottom: 0px auto 100px auto;
+                    margin: 0px auto 100px auto;
                     border-radius: 18px;
                 }
 
