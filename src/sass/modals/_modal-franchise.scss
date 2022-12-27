@@ -2,10 +2,11 @@
     z-index: 999;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 300ms linear;
+    background-color: var(--col-backdrop);
+    transition: opacity var(--animation-time) var(--cubic-function);
     }
 
     .is-hidden {
@@ -22,7 +23,6 @@
       width: 0;
       height: 0;
     }
-    
     position: absolute;
     max-width: 280px;
     width: 100%;
@@ -33,12 +33,15 @@
     background-color: var(--col-bg-light);
     border-radius: 10px;
     border: 2px solid var(--col-border-form);
-    top: 50%;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%) scale(1);
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateX(-50%);
     padding: 28px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--animation-time) var(--cubic-function);
     
     @include tablet {
     max-width: 568px;
@@ -66,6 +69,7 @@
         align-items: center;
         border-radius: 50%;
         border: none;
+        cursor: url(../images/products/cursor.png), pointer;
         background-color: transparent;
         transition: transform var(--animation-time) var(--cubic-function);
       }
@@ -167,7 +171,7 @@
     border: var(--border-input);
     padding: 8px 12px;
     margin: 0 auto;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border var(--animation-time) var(--cubic-function);
     margin-bottom: 12px;
     
     @include tablet {
@@ -284,7 +288,7 @@
     border-radius: 10px;
     border: transparent;
     margin: 0 auto;
-    transition: background-color 250ms linear;
+    transition: background-color var(--animation-time) var(--cubic-function);
     
     @include tablet {
     font-size: 14px;
@@ -295,18 +299,18 @@
     &:hover {
         background-color: var(--col-btn-bg-hover);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: box-shadow 250ms linear;
+        transition: box-shadow var(--animation-time) var(--cubic-function);
     }
     &:focus {
         background-color: var(--col-btn-bg-focus);
         color: var(--col-bg-primary);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: box-shadow 250ms linear;
+        transition: box-shadow var(--animation-time) var(--cubic-function);
     }
     &:disabled {
         background-color: var(--col-btn-bg-disabled);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: box-shadow 250ms linear;
+        transition: box-shadow var(--animation-time) var(--cubic-function);
     }
     }
     
