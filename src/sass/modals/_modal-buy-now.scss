@@ -52,7 +52,13 @@ textarea {
   transform: translateX(-50%);
   transition: transform var(--animation-time) var(--cubic-function);
   @media screen and (max-width: 479px) {
-    overflow: auto;
+    overflow: auto;   
+  // -ms-overflow-style: none;   
+  // scrollbar-width: none;   
+  // &::-webkit-scrollbar {   
+  //   width: 0;   
+  //   height: 0;   
+  // }
   }
   // overflow-y: scroll;
 
