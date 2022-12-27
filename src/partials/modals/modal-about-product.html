@@ -1,11 +1,11 @@
 <!-- --------------------------------------MAX FARMAHA WORKS IN THIS FIELD---------------------------------------------- -->
 
-<div class="modal-products__backdrop is-hidden" products-modal>
+<div class="modal-products__backdrop is-hidden" data-products-modal>
   <div class="modal-products">
     <button
       class="modal-products__close-btn"
       type="button"
-      products-modal-close
+      data-products-modal-close
     >
       <svg class="modal__check" width="24" height="24">
         <use href="./images/vectors.svg#icon-icon-menu-close"></use>
@@ -94,7 +94,7 @@
         pattern="[A-Za-z]{6,}"
         title="The name cannot be shorter than 6 characters and must contain only Latin characters"
         required
-        products-modal-username
+        data-products-modal-username
       />
       <input
         class="modal-products__input"
@@ -105,7 +105,7 @@
         pattern="[0-9]{10,}"
         title="The number cannot be shorter than 10 characters and must contain only numbers"
         required
-        products-modal-tel
+        data-products-modal-tel
       />
       <textarea
         class="modal-products__textarea"
@@ -113,7 +113,11 @@
         placeholder="Comment"
         aria-label="usercomment"
       ></textarea>
-      <button class="modal-products__btn btn" type="submit" products-modal-btn>
+      <button
+        class="modal-products__btn btn"
+        type="submit"
+        data-products-modal-btn
+      >
         Submit
       </button>
     </form>
@@ -123,9 +127,9 @@
 
 <!-- -------------------------------SCRIPT FOR ENABLED/DISABLED MODAL BUTTON-------------------------------------- -->
 <script>
-  const userName = document.querySelector('[products-modal-username]');
-  const userPhone = document.querySelector('[products-modal-tel]');
-  const button = document.querySelector('[products-modal-btn]');
+  const userName = document.querySelector('[data-products-modal-username]');
+  const userPhone = document.querySelector('[data-products-modal-tel]');
+  const button = document.querySelector('[data-products-modal-btn]');
   button.disabled = true;
 
   addEventListener('keyup', () => {
@@ -139,20 +143,22 @@
 
 <!-- -------------------------------SCRIPT FOR CLOSE/OPEN MODAL WINDOW-------------------------------------- -->
 <script>
-  const openModalBtn1 = document.querySelector('[products-modal-open-1]');
-  const openModalBtn2 = document.querySelector('[products-modal-open-2]');
-  const openModalBtn3 = document.querySelector('[products-modal-open-3]');
-  const closeModalBtn = document.querySelector('[products-modal-close]');
-  const modal = document.querySelector('[products-modal]');
+  const openModalBtn1 = document.querySelector('[data-products-modal-open-1]');
+  const openModalBtn2 = document.querySelector('[data-products-modal-open-2]');
+  const openModalBtn3 = document.querySelector('[data-products-modal-open-3]');
+  const closeModalBtn = document.querySelector('[data-products-modal-close]');
+  const modal = document.querySelector('[data-products-modal]');
+  const noScroll = document.querySelector('body');
+
+  const toggleModal = () => {
+    modal.classList.toggle('is-hidden');
+    noScroll.classList.toggle('no-scroll');
+  };
 
   openModalBtn1.addEventListener('click', toggleModal);
   openModalBtn2.addEventListener('click', toggleModal);
   openModalBtn3.addEventListener('click', toggleModal);
   closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    modal.classList.toggle('is-hidden');
-  }
 
   modal.addEventListener('click', e => {
     if (e.target === modal) modal.classList.toggle('is-hidden');
