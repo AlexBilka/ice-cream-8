@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".js-menu-container"),n=document.querySelector(".js-open-menu"),t=document.querySelector(".js-close-menu"),c=document.querySelector(".header__nav-mobile"),i=function(){e.classList.toggle("is-open")};n.addEventListener("click",i),t.addEventListener("click",i),c.addEventListener("click",(function(){e.classList.remove("is-open")})),window.matchMedia("(min-width: 768px)").addEventListener("change",(function(t){t.matches&&(e.classList.remove("is-open"),n.setAttribute("aria-expanded",!1))}))}();
+//# sourceMappingURL=index.79b52d67.js.map
