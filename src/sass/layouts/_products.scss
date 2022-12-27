@@ -158,8 +158,8 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
 }
 
 .products-item__wrapper {
-  max-width: 400px;
-  width: 100%;
+  
+  width: 280px;
   height: 420px;
   margin-left: auto;
   margin-right: auto;
@@ -177,7 +177,7 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
   position: relative;
 
   @include tablet {
-    max-width: 370px;
+    width: 224px;
     height: 428px;
     padding-top: 108px;
     padding-left: 26px;
@@ -185,6 +185,7 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
   }
 
   @include desktop {
+    width: 370px;
     height: 536px;
     padding-top: 165px;
     padding-left: 64px;
