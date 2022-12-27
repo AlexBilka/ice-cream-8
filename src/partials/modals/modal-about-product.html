@@ -144,15 +144,17 @@
   const openModalBtn3 = document.querySelector('[products-modal-open-3]');
   const closeModalBtn = document.querySelector('[products-modal-close]');
   const modal = document.querySelector('[products-modal]');
+  const noScroll = document.querySelector('body');
+
+  const toggleModal = () => {
+    modal.classList.toggle('is-hidden');
+    noScroll.classList.toggle('no-scroll');
+  };
 
   openModalBtn1.addEventListener('click', toggleModal);
   openModalBtn2.addEventListener('click', toggleModal);
   openModalBtn3.addEventListener('click', toggleModal);
   closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    modal.classList.toggle('is-hidden');
-  }
 
   modal.addEventListener('click', e => {
     if (e.target === modal) modal.classList.toggle('is-hidden');
