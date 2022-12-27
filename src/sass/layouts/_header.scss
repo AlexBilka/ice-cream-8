@@ -170,7 +170,7 @@
         }
     }
     &-link:focus {
-        color: var(--col-menu-default);
+        color: var(--col-text-primary);
     }
     &-item:not(:last-child) {
         margin-bottom: 32px;
@@ -178,8 +178,4 @@
             margin-bottom: 40px;
         }
     }
-}
-
-.mobile-link-current {
-    color: var(--col-text-primary);
 }
