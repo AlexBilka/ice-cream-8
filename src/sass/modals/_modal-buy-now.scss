@@ -375,6 +375,7 @@ textarea {
   border-radius: 50%;
   border: none;
   background-color: transparent;
+  cursor: url(../images/products/cursor.png), pointer;
   transition: transform var(--animation-time) var(--cubic-function);
 }
 .close-buy-now-button:hover,
