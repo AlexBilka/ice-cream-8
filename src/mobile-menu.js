@@ -1,21 +1,15 @@
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
-  const mobileButton = document.querySelector('.js-menu-button');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
-  const bodyScroll = document.querySelector('.js-scroll');
   const menuClose = document.querySelector('.header__nav-mobile');
 
   const toggleMenu = () => {
     mobileMenu.classList.toggle('is-open');
-    mobileButton.classList.toggle('is-open');
-    bodyScroll.classList.toggle('no-scroll');
   };
 
   const removeMenu = () => {
     mobileMenu.classList.remove('is-open');
-    mobileButton.classList.remove('is-open');
-    bodyScroll.classList.remove('no-scroll');
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
@@ -27,6 +21,6 @@
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
     mobileButton.classList.remove('is-open');
-    bodyScroll.classList.remove('is-open');
+    noScroll.classList.remove('is-open');
   });
 })();
