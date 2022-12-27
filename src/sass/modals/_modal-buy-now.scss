@@ -1,24 +1,22 @@
-:root {
-  --col-bg-primary: #ffffff;
-  --col-bg-light: #fcfcfc;
-  --col-backdrop: rgba(0, 0, 0, 0.2);
-  --col-text-primary: #131313;
-  --col-bg-dark: #84a178;
-  --col-bg-cream: #aec6a5;
-  --col-bg-cofee: #efd478;
-  --col-bg-milkshakes: #d6936d;
-  --col-btn-default: #000000;
-  --col-default: #f8d24e;
-  --col-accent: #0a8817;
-  --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-time: 250ms;
-}
+// :root {
+//   --col-bg-primary: #ffffff;
+//   --col-bg-light: #fcfcfc;
+//   --col-backdrop: rgba(0, 0, 0, 0.2);
+//   --col-text-primary: #131313;
+//   --col-bg-dark: #84a178;
+//   --col-bg-cream: #aec6a5;
+//   --col-bg-cofee: #efd478;
+//   --col-bg-milkshakes: #d6936d;
+//   --col-btn-default: #000000;
+//   --col-default: #f8d24e;
+//   --col-accent: #0a8817;
+//   --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   --animation-time: 250ms;
+// }
 textarea {
   resize: none;
 }
-.no-scroll {
-  overflow: hidden;
-}
+
 .backdrop-buy-now {
   z-index: 999;
   position: fixed;
