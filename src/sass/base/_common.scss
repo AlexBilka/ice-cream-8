@@ -1,6 +1,29 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 body {
+  background-image: url(../images/products/products-bg-mob@1x.jpg);
+  background-repeat: repeat;
+
+  @include retina {
+    background-image: url(../images/products/products-bg-mob@2x.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../images/products/products-bg-tab@1x.jpg);
+
+    @include retina {
+      background-image: url(../images/products/products-bg-tab@2x.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/products/products-bg-desk@1x.jpg);
+
+    @include retina {
+      background-image: url(../images/products/products-bg-desk@2x.jpg);
+    }
+  }
+
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.76;
