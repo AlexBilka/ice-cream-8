@@ -168,6 +168,7 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
   padding-left: 40px;
   padding-right: 40px;
   background-color: var(--col-bg-cream);
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 500ms;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   display: flex;
@@ -196,6 +197,7 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
 
 .products-item__wrapper--ice-cream {
   background-color: var(--col-bg-cream);
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 500ms;
   margin-bottom: 168px;
 
   @include tablet {
@@ -274,6 +276,7 @@ $maxWidth: 1200; // Variable for mixin adaptiv-font
 
 .products-item__wrapper--ice-coffee {
   background-color: var(--col-bg-cofee);
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 500ms;
   margin-bottom: 168px;
 
   @include tablet {
