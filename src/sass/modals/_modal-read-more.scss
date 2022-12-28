@@ -73,36 +73,26 @@
 
 .close__read-more {
   position: absolute;
-  top: 12px;
   right: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 12px;
   border: none;
   background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #131313;
+  fill: currentColor;
   cursor: url(../images/products/cursor.png), pointer;
+
   transition-property: all;
   transition-duration: var(--animation-time);
   transition-timing-function: var(--cubic-function);
+
   &:hover,
   &:focus {
     transform: scale(1.3);
-  }
-
-}
-
-.close-icon__read-more {
-  fill: var(--col-text-primary);
-  transition: fill var(--animation-time) var(--cubic-function);
-  width: 20px;
-  height: 20px;
-  @include tablet {
-    width: 24px;
-    height: 24px;
-  }
-  .close__read-more__button:hover &,
-  .close__read-more__button:focus & {
-    fill: var(--col-btn-default);
   }
 }
 
@@ -144,4 +134,3 @@
     max-height: 205px;
   }
 }
-
