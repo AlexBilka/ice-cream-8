@@ -2,6 +2,7 @@
   padding-bottom: 20px;
   background-color: var(--col-bg-dark);
   position: relative;
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 500ms;
   @include tablet {
     padding-bottom: 12px;
   }

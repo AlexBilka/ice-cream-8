@@ -1,0 +1,82 @@
+.my-mood {
+  position: fixed;
+  width: 85px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  top: 75px;
+  left: -10px;
+  z-index: 16;
+  transform: translateX(-76%);
+  transition: transform 0.5s;
+  transition: box-shadow 0.5s;
+  box-shadow: 0px 0px 0px 0px rgba(255,255,255,1);
+  transition: transform 0.5s;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  &:hover,
+  &:focus {
+    transform: translateX(0);
+  }
+}
+
+.basicbtn {
+  width: 20px;
+  height: 50px;
+  margin-left: auto;
+  border-radius: 10px;
+  background-color: #84a178;
+  border: none;
+  transition: all 0.5s;
+
+  &:hover,
+  &:focus {
+    width: 55px;
+  }
+}
+.purplebtn {
+  width: 20px;
+  height: 50px;
+  margin-left: auto;
+  border-radius: 10px;
+  background-color: #a1789d;
+  border: none;
+  transition: all 0.5s;
+
+  &:hover,
+  &:focus {
+    width: 55px;
+  }
+}
+
+.bluebtn {
+  width: 20px;
+  height: 50px;
+  margin-left: auto;
+  border-radius: 10px;
+  background-color: #678dc5;
+  border: none;
+  transition: all 0.5s;
+
+  &:hover,
+  &:focus {
+    width: 55px;
+  }
+}
+
+.active-mood {
+  box-shadow: 0px 0px 35px 0px rgba(255, 255, 255, 1);
+  background-color: #ffffff;
+}
+
+.disactive-mood {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+    background-color: transparent;
+  }
