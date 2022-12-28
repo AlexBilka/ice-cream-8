@@ -1,0 +1,1 @@
+{"mappings":"AAAA,IAAMA,SAAW,SAAAC,G,OAASC,SAASC,gBAAgBC,UAAYH,C","sources":["src/my-mood.js"],"sourcesContent":["const setTheme = theme => document.documentElement.className = theme;\n\n"],"names":["setTheme","theme","document","documentElement","className"],"version":3,"file":"index.62d1e2dd.js.map"}
