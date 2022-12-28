@@ -137,24 +137,30 @@ textarea {
 }
 
 .checkbox-input.ice-cream.hide {
-  top: 250px;
-  left: 120px;
+  top: 200px;
+  @media screen and (max-width: 767px) {
+    top: 250px;
+  }
   @media screen and (max-width: 479px) {
     top: 240px;
     left: 130px;
   }
 }
 .checkbox-input.ice-coffee.hide {
-  top: 250px;
-  left: 280px;
+  top: 200px;
+  @media screen and (max-width: 767px) {
+    top: 460px;
+  }
   @media screen and (max-width: 479px) {
     top: 460px;
     left: 130px;
   }
 }
 .checkbox-input.milkshake.hide {
-  top: 250px;
-  left: 440px;
+  top: 200px;
+  @media screen and (max-width: 767px) {
+    top: 650px;
+  }
   @media screen and (max-width: 479px) {
     top: 675px;
     left: 130px;
