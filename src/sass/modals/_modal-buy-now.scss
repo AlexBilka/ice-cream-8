@@ -137,25 +137,25 @@ textarea {
 }
 
 .checkbox-input.ice-cream.hide {
-  top: 200px;
+  top: 250px;
+  left: 120px;
   @media screen and (max-width: 479px) {
-    position: absolute;
     top: 240px;
     left: 130px;
   }
 }
 .checkbox-input.ice-coffee.hide {
-  top: 200px;
+  top: 250px;
+  left: 280px;
   @media screen and (max-width: 479px) {
-    position: absolute;
     top: 460px;
     left: 130px;
   }
 }
 .checkbox-input.milkshake.hide {
-  top: 200px;
+  top: 250px;
+  left: 440px;
   @media screen and (max-width: 479px) {
-    position: absolute;
     top: 675px;
     left: 130px;
   }
@@ -165,6 +165,8 @@ textarea {
   position: relative;
   display: block;
   margin-top: 66px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .checkbox-label .checkbox-wrap {
@@ -178,8 +180,6 @@ textarea {
   border-top: none;
   border-radius: 15px;
   background-color: var(--col-bg-primary);
-  // cursor: url(../images/products/cursor.png), pointer;
-  cursor: pointer;
   transition: background-color var(--animation-time) var(--cubic-function);
   transition: box-shadow var(--animation-time) var(--cubic-function);
 }
