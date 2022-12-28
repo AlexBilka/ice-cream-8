@@ -53,6 +53,10 @@
         refs.openModalBtnMob.addEventListener("click", toggleModal);
         refs.closeModalBtn.addEventListener("click", toggleModal);
 
+        modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.toggle('is-hidden');
+  });
+
         function toggleModal() {
             refs.modal.classList.toggle("is-hidden");
             refs.body.classList.toggle("no-scroll");
