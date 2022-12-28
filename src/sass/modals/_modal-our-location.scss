@@ -62,8 +62,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform var(--animation-time) var(--cubic-function);
-  @media screen and (max-width: 479px) {
-    overflow-y: scroll;
+  overflow: auto;   
+  -ms-overflow-style: none;   
+  scrollbar-width: none;   
+  &::-webkit-scrollbar {   
+    width: 0;   
+    height: 0;   
   }
   @include tablet {
     padding-top: 32px;
