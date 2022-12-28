@@ -85,3 +85,5 @@ document.addEventListener(
   );
 })(window.document, window.history, window.location);
 
+new Snowflakes();
+
