@@ -6,6 +6,7 @@
     var(--col-bg-dark) 24%,
     var(--col-bg-dark) 100%
   );
+  transition: background-image cubic-bezier(0.4, 0, 0.2, 1) 500ms;
 
   @include tablet {
     background-image: linear-gradient(
@@ -14,17 +15,19 @@
       var(--col-bg-dark) 45%,
       var(--col-bg-dark) 100%
     );
+    transition: background-image cubic-bezier(0.4, 0, 0.2, 1) 500ms;
     padding-bottom: 40px;
   }
 
   @include desktop {
-    background-image: linear-gradient(
+    background-color: linear-gradient(
       to bottom,
       transparent 17%,
       var(--col-bg-dark) 17%,
       var(--col-bg-dark) 100%
     );
     padding-bottom: 120px;
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 500ms;
   }
 }
 
