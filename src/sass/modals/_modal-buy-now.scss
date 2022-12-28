@@ -124,7 +124,9 @@ textarea {
     margin-bottom: 40px;
   }
 }
-
+.buy-now__item {
+  position: relative;
+}
 .hide {
   position: absolute;
   width: 1px;
@@ -135,37 +137,13 @@ textarea {
   border: 0;
   clip: rect(0 0 0 0);
 }
+.checkbox-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.checkbox-input.ice-cream.hide {
-  top: 200px;
-  @media screen and (max-width: 767px) {
-    top: 250px;
-  }
-  @media screen and (max-width: 479px) {
-    top: 240px;
-    left: 130px;
-  }
-}
-.checkbox-input.ice-coffee.hide {
-  top: 200px;
-  @media screen and (max-width: 767px) {
-    top: 460px;
-  }
-  @media screen and (max-width: 479px) {
-    top: 460px;
-    left: 130px;
-  }
-}
-.checkbox-input.milkshake.hide {
-  top: 200px;
-  @media screen and (max-width: 767px) {
-    top: 650px;
-  }
-  @media screen and (max-width: 479px) {
-    top: 675px;
-    left: 130px;
-  }
-}
 .checkbox-label {
   width: 132px;
   position: relative;
