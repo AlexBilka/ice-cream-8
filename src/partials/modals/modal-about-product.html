@@ -127,40 +127,43 @@
 
 <!-- -------------------------------SCRIPT FOR ENABLED/DISABLED MODAL BUTTON-------------------------------------- -->
 <script>
-  const userName = document.querySelector('[data-products-modal-username]');
-  const userPhone = document.querySelector('[data-products-modal-tel]');
-  const button = document.querySelector('[data-products-modal-btn]');
-  button.disabled = true;
+  const userNameAP = document.querySelector('[data-products-modal-username]');
+  const userPhoneAP = document.querySelector('[data-products-modal-tel]');
+  const buttonAP = document.querySelector('[data-products-modal-btn]');
+  buttonAP.disabled = true;
 
   addEventListener('keyup', () => {
-    if (userName.value.length > 0 && userPhone.value.length > 0) {
-      button.disabled = false;
+    if (userNameAP.value.length > 0 && userPhoneAP.value.length > 0) {
+      buttonAP.disabled = false;
     } else {
-      button.disabled = true;
+      buttonAP.disabled = true;
     }
   });
 </script>
 
 <!-- -------------------------------SCRIPT FOR CLOSE/OPEN MODAL WINDOW-------------------------------------- -->
 <script>
-  const openModalBtn1 = document.querySelector('[data-products-modal-open-1]');
-  const openModalBtn2 = document.querySelector('[data-products-modal-open-2]');
-  const openModalBtn3 = document.querySelector('[data-products-modal-open-3]');
-  const closeModalBtn = document.querySelector('[data-products-modal-close]');
-  const modal = document.querySelector('[data-products-modal]');
-  const noScroll = document.querySelector('body');
+  const openMAPBtn1 = document.querySelector('[data-products-modal-open-1]');
+  const openMAPBtn2 = document.querySelector('[data-products-modal-open-2]');
+  const openMAPBtn3 = document.querySelector('[data-products-modal-open-3]');
+  const closeMAPBtn = document.querySelector('[data-products-modal-close]');
+
+  const modalAP = document.querySelector('[data-products-modal]');
+  const body = document.querySelector('body');
 
   const toggleModal = () => {
-    modal.classList.toggle('is-hidden');
-    noScroll.classList.toggle('no-scroll');
+    modalAP.classList.toggle('is-hidden');
+    body.classList.toggle('no-scroll');
   };
 
-  openModalBtn1.addEventListener('click', toggleModal);
-  openModalBtn2.addEventListener('click', toggleModal);
-  openModalBtn3.addEventListener('click', toggleModal);
-  closeModalBtn.addEventListener('click', toggleModal);
-
-  modal.addEventListener('click', e => {
-    if (e.target === modal) modal.classList.toggle('is-hidden');
+  modalAP.addEventListener('click', e => {
+    if (e.target === modalAP) modalAP.classList.toggle('is-hidden');
+    if (e.target === modalAP) body.classList.toggle('no-scroll');
   });
+
+  openMAPBtn1.addEventListener('click', toggleModal);
+  openMAPBtn2.addEventListener('click', toggleModal);
+  openMAPBtn3.addEventListener('click', toggleModal);
+  closeMAPBtn.addEventListener('click', toggleModal);
 </script>
+<!-- -------------------------------SCRIPT FOR CLOSE/OPEN MODAL WINDOW-------------------------------------- -->
