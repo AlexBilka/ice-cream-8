@@ -1,5 +1,4 @@
 
-
     (() => {
         const refs = {
             openModalBtn: document.querySelector("[data-modal-buy-now-header-open]"),
@@ -12,6 +11,11 @@
         refs.openModalBtn.addEventListener("click", toggleModal);
         refs.openModalBtnMob.addEventListener("click", toggleModal);
         refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.modal.addEventListener('click', e => { 
+      if (e.target === refs.modal) refs.modal.classList.toggle('is-hidden'); 
+      if (e.target === refs.modal) refs.body.classList.toggle('no-scroll'); 
+    });
 
         function toggleModal() {
             refs.modal.classList.toggle("is-hidden");
