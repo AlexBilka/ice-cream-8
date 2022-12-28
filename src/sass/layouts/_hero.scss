@@ -1,5 +1,6 @@
  .hero {
      background-color: var(--col-bg-dark);
+     transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 500ms;
      position: relative;
      padding-top: 118px;
      &__image-icecream {
