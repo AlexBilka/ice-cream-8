@@ -10,7 +10,7 @@
     height: 66px;
   }
   @include desktop {
-    height: 80px;
+    height: 76px;
   }
   &__button {
     display: none;
@@ -66,6 +66,7 @@
     display: flex;
     height: 42px;
     align-items: center;
+    padding-top: 10px;
   }
   &__link {
     font-weight: 700;
