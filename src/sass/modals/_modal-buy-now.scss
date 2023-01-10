@@ -49,23 +49,22 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
   transition: transform var(--animation-time) var(--cubic-function);
-  overflow: auto;   
-  -ms-overflow-style: none;   
-  scrollbar-width: none;   
-  &::-webkit-scrollbar {   
-    width: 0;   
-    height: 0;   
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
   // @media screen and (max-width: 479px) {
-  //   overflow: auto;   
-  // -ms-overflow-style: none;   
-  // scrollbar-width: none;   
-  // &::-webkit-scrollbar {   
-  //   width: 0;   
-  //   height: 0;   
+  //   overflow: auto;
+  // -ms-overflow-style: none;
+  // scrollbar-width: none;
+  // &::-webkit-scrollbar {
+  //   width: 0;
+  //   height: 0;
   // }
   // }
-  
 
   @include tablet {
     top: 50%;
@@ -77,7 +76,6 @@ textarea {
     padding-right: 54px;
     min-width: 568px;
     max-height: 644px;
-
   }
 }
 .backdrop__buy-now.is-hidden .modal__buy-now {
@@ -187,6 +185,7 @@ textarea {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--col-text-primary);
+  cursor: url(../images/products/cursor.png), pointer;
 }
 .checkbox-label::before {
   content: '';
@@ -197,6 +196,9 @@ textarea {
   position: absolute;
   top: 7px;
   left: 0;
+
+  cursor: url(../images/products/cursor.png), pointer;
+
   transform: translateY(-50%);
 }
 .checkbox-label.ice-creams::before {
@@ -224,6 +226,8 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  cursor: url(../images/products/cursor.png), pointer;
 }
 .checkbox-label.ice-creams::after {
   background-image: url(../images/modal-buy-now/ice-cream-mobile.jpeg);
