@@ -28,7 +28,7 @@
   --col-menu-disabled: #ababab;
 
   --col-btn-bg-default: #f8d24e;
-  --col-btn-bg-hover: #0a8817;
+  --col-btn-bg-hover: #fcfcfc;
   --col-btn-bg-focus: #0a8817;
   --col-btn-bg-disabled: #ababab;
 
@@ -45,20 +45,20 @@
 
   --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-time: 250ms;
-    
+
   &.purple {
-    --col-bg-dark: #A1789D;
-    --col-bg-cream: #C89CC4;
+    --col-bg-dark: #a1789d;
+    --col-bg-cream: #c89cc4;
     --col-bg-cofee: #efd478;
-  --col-bg-milkshakes: #EFB0C7;
-  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    --col-bg-milkshakes: #efb0c7;
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
 
   &.blue {
-    --col-bg-dark: #678DC5;
-    --col-bg-cream:#9EC1EA;
+    --col-bg-dark: #678dc5;
+    --col-bg-cream: #9ec1ea;
     --col-bg-cofee: #efd478;
-  --col-bg-milkshakes: #9EAFEA;
-  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    --col-bg-milkshakes: #9eafea;
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
 }
