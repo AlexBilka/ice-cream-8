@@ -1,6 +1,6 @@
 .my-mood {
   position: fixed;
-  width: 60px;
+  width: 80px;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   border-radius: 10px;
   gap: 10px;
   top: 300px;
-  right: -20px;
+  right: -40px;
   z-index: 16;
   transform: translateX(0);
   transition: box-shadow 0.5s;
@@ -30,13 +30,13 @@
   }
 
   @include desktop {
-    top: 300px;
+    top: 400px;
   }
 }
 
 .my-mood__description {
   position: absolute;
-  right: 25px;
+  right: 45px;
   bottom: 45px;
   transform: rotate(270deg);
   width: 100px;
